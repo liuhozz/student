@@ -1,0 +1,19 @@
+package com.heima.ssm.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.heima.ssm.mapper.SUserMapper;
+import com.heima.ssm.pojo.SUser;
+
+public class Login implements com.heima.ssm.service.Login {
+
+	@Autowired
+	private SUserMapper userMapper;
+	
+	public SUser login(SUser user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

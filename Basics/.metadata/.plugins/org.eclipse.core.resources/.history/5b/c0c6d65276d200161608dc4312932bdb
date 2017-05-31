@@ -1,0 +1,3 @@
+putStreamWriter(字节流,编码表)
+* 
+		BufferedReader br 

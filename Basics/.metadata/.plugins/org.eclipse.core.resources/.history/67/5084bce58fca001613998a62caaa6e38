@@ -1,0 +1,19 @@
+package com.heima.day12.Test;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] s1={"asd","qwe","q4er","zxc","q9a","wsx"};
+		Pattern p = Pattern.compile("[0-9]*");
+		 Matcher m = p.matcher(s1);
+		 boolean b = m.matches();
+	}
+
+}

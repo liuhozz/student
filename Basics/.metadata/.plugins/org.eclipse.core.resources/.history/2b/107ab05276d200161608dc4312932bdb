@@ -1,0 +1,3 @@
+{
+			private Student s;						//获取到被包装的类的引用
+			pu

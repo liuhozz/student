@@ -1,0 +1,18 @@
+package cn.itcast.erp.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+import cn.itcast.erp.entity.Dep;
+
+public class DepAction extends ActionSupport implements ModelDriven<Dep> {
+
+	private Dep dep = new Dep();
+	@Override
+	public Dep getModel() {
+		// TODO Auto-generated method stub
+		return dep;
+	}
+
+	
+}

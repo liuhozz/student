@@ -1,0 +1,39 @@
+package com.heima.Test;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Test03 {
+
+	/**
+	 * @param args
+	 *            定义一个方法(copyFile2Dir),接收两个参数,第一个参数是一个文件,第二个参数是一个文件夹
+	 *            方法的作用是把文件复制到文件夹中,文件名与原来的文件相同即可 例如,第一个参数为: c:\1.jpg 第二个参数是:
+	 *            D:\abc 那么就是把C盘下的1.jpg文件复制到D盘下的abc文件夹中,文件名还是1.jpg
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File file = new File("d:\\test\\1.jpg");
+
+		File file1 = new File("e:\\test");
+		file1.mkdir();
+
+		copyFile2Dir(file, new File(file1, "2.jpg"));
+	}
+
+	private static void copyFile2Dir(File file, File file2) {
+		// TODO Auto-generated method stub
+		BufferedInputStream bis=new BufferedInputStream(new FileInputStream(file));
+		BufferedOutputStream bos=new BufferedOutputStream(new FileOutputStream(file2));
+		int len;
+		while((len=bis.read()) != -1){
+			bos.write(len);
+		}
+		
+		bos.close();
+	}
+
+}

@@ -1,0 +1,189 @@
+package cn.itcast.erp.biz.impl;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+
+import com.redsum.bos.ws.impl.IWaybillWs;
+
+import cn.itcast.erp.biz.IReturnorderdetailBiz;
+import cn.itcast.erp.dao.IReturnorderdetailDao;
+import cn.itcast.erp.dao.ISupplierDao;
+import cn.itcast.erp.dao.impl.StoredetailDao;
+import cn.itcast.erp.dao.impl.StoreoperDao;
+import cn.itcast.erp.entity.Orderdetail;
+import cn.itcast.erp.entity.Orders;
+import cn.itcast.erp.entity.Returnorderdetail;
+import cn.itcast.erp.entity.Returnorders;
+import cn.itcast.erp.entity.Storedetail;
+import cn.itcast.erp.entity.Storeoper;
+import cn.itcast.erp.entity.Supplier;
+import cn.itcast.erp.exception.ErpException;
+/**
+ * 退货订单明细业务逻辑类
+ * @author Administrator
+ *
+ */
+public class ReturnorderdetailBiz extends BaseBiz<Returnorderdetail> implements IReturnorderdetailBiz {
+
+	private IReturnorderdetailDao returnorderdetailDao;
+	private StoredetailDao storedetailDao;
+	private StoreoperDao storeoperDao;
+	private ISupplierDao supplierDao;
+	private IWaybillWs waybillWs;
+	
+	public void setSupplierDao(ISupplierDao supplierDao) {
+		this.supplierDao = supplierDao;
+	}
+
+	public void setWaybillWs(IWaybillWs waybillWs) {
+		this.waybillWs = waybillWs;
+	}
+
+	public void setStoreoperDao(StoreoperDao storeoperDao) {
+		this.storeoperDao = storeoperDao;
+	}
+
+	public void setStoredetailDao(StoredetailDao storedetailDao) {
+		this.storedetailDao = storedetailDao;
+	}
+
+	public void setReturnorderdetailDao(IReturnorderdetailDao returnorderdetailDao) {
+		this.returnorderdetailDao = returnorderdetailDao;
+		super.setBaseDao(this.returnorderdetailDao);
+	}
+	
+	/**
+	 * 销售退货入库
+	 * @param empUuid
+	 * @param uuid
+	 * @param storeUuid
+	 */
+	public void doInStore(Long empUuid, Long uuid, Long storeUuid) {
+		// TODO Auto-generated method stub
+		Returnorderdetail orderdetail = this.returnorderdetailDao.get(uuid);
+		if(!orderdetail.getState().equals(Returnorderdetail.STATE_NOT_IN)){
+			throw new ErpException("已入过库了  不要在重复入库了");
+		}
+		//设置状态为已入库
+		orderdetail.setState(Returnorderdetail.STATE_IN);
+		//设置入库时间
+		orderdetail.setEndtime(new Date());
+		//设置入库的操作人员
+		orderdetail.setEnder(empUuid);
+		//设置入到那个仓库
+		orderdetail.setStoreuuid(storeUuid);
+		
+		
+		/**要更新仓库库存表**/
+		Storedetail storedetail = new Storedetail();
+		storedetail.setGoodsuuid(orderdetail.getGoodsuuid());
+		storedetail.setStoreuuid(storeUuid);
+		
+		List<Storedetail> slist = storedetailDao.getList(storedetail, null, null);
+		//判断库存表中是否存在此商品的记录   存在则增加商品的数量    不存在则新增记录
+		if(slist.size()>0){
+			slist.get(0).setNum(slist.get(0).getNum() == null?0:slist.get(0).getNum()+orderdetail.getNum());
+		}else{
+			storedetail.setNum(orderdetail.getNum());
+			storedetailDao.add(storedetail);
+		}
+		
+		/**要更新仓库操作记录表**/
+		Storeoper storeoper = new Storeoper();
+		storeoper.setEmpuuid(empUuid);
+		storeoper.setGoodsuuid(orderdetail.getGoodsuuid());
+		storeoper.setNum(orderdetail.getNum());
+		storeoper.setStoreuuid(storeUuid);
+		storeoper.setType(Returnorderdetail.STATE_IN);
+		storeoper.setOpertime(orderdetail.getEndtime());
+		storeoperDao.add(storeoper);
+		
+		/**要更新订单表**/
+		Returnorderdetail queryParam = new Returnorderdetail();
+		Returnorders orders = orderdetail.getReturnorders();
+		queryParam.setReturnorders(orders);
+		//2. 查询订单下是否还存在状态为0的明细
+		queryParam.setState(Orderdetail.STATE_NOT_IN);
+		//3. 调用 getCount方法，来计算是否存在状态为0的明细
+		long count = returnorderdetailDao.getCount(queryParam, null, null);
+		if(count == 0){
+			//4. 所有的明细都已经入库了，则要更新订单的状态，关闭订单
+			orders.setState(Returnorders.STATE_END);
+			orders.setEndtime(orderdetail.getEndtime());
+			orders.setEnder(empUuid);
+		}
+		
+	}
+	
+	
+	/**
+	 * 出库
+	 */
+	
+	public void doOutStore(Long uuid,Long storeuuid, Long empuuid){
+		//******** 第1步 更新商品明细**********
+		//1. 获取明细信息
+		Returnorderdetail detail = returnorderdetailDao.get(uuid);
+		//2. 判断明细的状态，一定是未入库的
+		if(!Returnorderdetail.STATE_NOT_OUT.equals(detail.getState())){
+			throw new ErpException("亲！该明细已经出库了，不能重复出库");
+		}
+		//3. 修改状态为已出库
+		detail.setState(Returnorderdetail.STATE_OUT);
+		//4. 出库时间
+		detail.setEndtime(new Date());
+		//5. 库管员
+		detail.setEnder(empuuid);
+		//6. 从哪个仓库出
+		detail.setStoreuuid(storeuuid);
+		
+		//*******第2 步 更新商品仓库库存*********
+		//1. 构建查询的条件
+		Storedetail storedetail = new Storedetail();
+		storedetail.setGoodsuuid(detail.getGoodsuuid());
+		storedetail.setStoreuuid(storeuuid);
+		//2. 通过查询 检查是否存在库存信息
+		List<Storedetail> storeList = storedetailDao.getList(storedetail, null, null);
+		if(storeList.size()>0){
+			//存在的话，则应该累加它的数量
+			Storedetail sd = storeList.get(0);
+			sd.setNum(sd.getNum() - detail.getNum());
+			if(sd.getNum() < 0){
+				throw new ErpException("库存不足");
+			}
+		}else{
+			throw new ErpException("库存不足");
+		}
+		
+		//****** 第3步 添加操作记录*****
+		//1. 构建操作记录
+		Storeoper log = new Storeoper();
+		log.setEmpuuid(empuuid);
+		log.setGoodsuuid(detail.getGoodsuuid());
+		log.setNum(detail.getNum());
+		log.setOpertime(detail.getEndtime());
+		log.setStoreuuid(storeuuid);
+		log.setType(Storeoper.TYPE_OUT);
+		//2. 保存到数据库中
+		storeoperDao.add(log);
+		
+		//**** 第4步 是否需要更新订单的状态********
+	
+		//1. 构建查询条件
+		Returnorderdetail queryParam = new Returnorderdetail();
+		Returnorders orders = detail.getReturnorders();
+		queryParam.setReturnorders(orders);
+		//2. 查询订单下是否还存在状态为0的明细
+		queryParam.setState(Returnorderdetail.STATE_NOT_OUT);
+		//3. 调用 getCount方法，来计算是否存在状态为0的明细
+		long count = returnorderdetailDao.getCount(queryParam, null, null);
+		if(count == 0){
+			//4. 所有的明细都已经出库了，则要更新订单的状态，关闭订单
+			orders.setState(Returnorders.STATE_OUT);
+			orders.setEndtime(detail.getEndtime());
+			orders.setEnder(empuuid);
+			
+		}
+	}
+}

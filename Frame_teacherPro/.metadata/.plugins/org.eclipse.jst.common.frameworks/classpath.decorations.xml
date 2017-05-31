@@ -1,0 +1,50 @@
+<classpath>
+  <container id="spring4_day03_jdbc!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/spring4_day03_jdbc/WebContent/WEB-INF/lib/spring-jdbc-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-jdbc-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/spring4_day03_jdbc/WebContent/WEB-INF/lib/spring-tx-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-tx-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="struts2_day02!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/struts2_day02/WebContent/WEB-INF/lib/xwork-core-2.3.24.jar">
+      <source-attachment-path>E:/黑马视频/_/Struts2day01/资料/struts2/struts-2.3.24-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="struts2_crm!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/struts2_crm/WebContent/WEB-INF/lib/struts2-core-2.3.24.jar">
+      <source-attachment-path>E:/黑马视频/_/Struts2day01/资料/struts2/struts-2.3.24-all.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="crm_ssh_1!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/xwork-core-2.3.24.jar">
+      <source-attachment-path>E:/驱动包/Struts2/struts-2.3.24-all.zip</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/spring-web-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-web-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/spring-tx-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-tx-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/spring-jdbc-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-jdbc-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/struts2-core-2.3.24.jar">
+      <source-attachment-path>E:/驱动包/Struts2/struts-2.3.24-all.zip</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/Frame_teacherPro/crm_ssh_1/WebContent/WEB-INF/lib/spring-orm-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-orm-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="struts2_day03!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/struts2_day03/WebContent/WEB-INF/lib/ognl-3.0.6.jar">
+      <source-attachment-path>E:/黑马视频/_/Struts2day03/资料/ognl-2.7.3-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="spring4_crm!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/Frame_teacherPro/spring4_crm/WebContent/WEB-INF/lib/spring-web-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/驱动包/spring/spring-framework-4.2.4.RELEASE/libs/spring-web-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

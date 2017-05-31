@@ -1,0 +1,8 @@
+StringBuffer
+
+reverse();    	字符串的反转功能
+sort();		数组自动排序
+
+StringBuffer的substring()返回的是String 而不是StringBuffer
+
+JDK5新特性之一自动装箱,自动拆箱(自动拆箱时如果值不在byte范围内则会在堆中创建对象在byte范围内会自动获取在常量池中获取已有的地址值)

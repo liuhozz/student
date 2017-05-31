@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Apr 10 20:13:06 CST 2017
+org.eclipse.jst.jee.server\:SSH=D\:\\Tomcat7.0x\\webapps\\SSH
+org.eclipse.jst.jee.server\:/binary\:E\:\\Eclipse\\Frame_teacherPro\\SSH\\WebContent\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar=D\:\\Tomcat7.0x\\webapps\\SSH\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar

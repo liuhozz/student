@@ -1,0 +1,27 @@
+package comg.heima.HashSetTest01;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class Test01 {
+
+	/**
+	 *  使用Scanner从键盘读取一行输入,去掉其中重复字符, 打印出不同的那些字符
+	 * 		aaaabbbcccddd
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dome1();
+	}
+
+	public static void Dome1() {
+		Scanner sc=new Scanner(System.in);
+		String input=sc.next();
+		LinkedHashSet<Character> hs=new LinkedHashSet<>();
+		for (int i=0;i<input.length();i++){
+			hs.add(input.charAt(i));
+		}
+		System.out.println(hs);
+	}
+
+}

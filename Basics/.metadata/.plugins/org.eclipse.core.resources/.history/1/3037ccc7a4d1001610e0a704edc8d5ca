@@ -1,0 +1,17 @@
+package com.heima.Test;
+
+import java.io.File;
+
+public class Test01 {
+
+	/**
+	 * 在指定盘符(根目录)下面的“hello\\world\\Java”这个目录中创建文件a.txt。
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File file=new File("d:\\hello\\world\\Java\\a.txt");
+		file.mkdirs;
+
+	}
+
+}

@@ -1,0 +1,60 @@
+package com.heima.springmvc.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.heima.springmvc.pojo.Item;
+import com.heima.springmvc.pojo.QueryVo;
+import com.heima.springmvc.service.ItemService;
+
+@Controller
+public class FirstController {
+
+	@Autowired
+	private ItemService itemService;
+	
+	@RequestMapping("getList")
+	public ModelAndView getList(){
+		
+		List<Item> list = itemService.getItemList();
+		ModelAndView moder = new ModelAndView();
+		System.out.println(list);
+		moder.addObject("itemList", list);
+		moder.setViewName("jsp/itemList.jsp");
+		return moder;
+	}
+	
+	@RequestMapping("getListStr")
+	public String getListStr(Model model){
+		List<Item> list = itemService.getItemList();
+		model.addAttribute("itemList", list);
+		return "jsp/itemList.jsp";
+	}
+	
+	
+	@RequestMapping("queryItem")
+	public String queryItem(Model model , QueryVo vo){
+		for(Integer id :vo.getIds()){
+			System.out.println(id);
+		}
+		return "forward:getListStr.action";
+	}
+	
+	@RequestMapping("itemEdit")
+	public String editItem(Item item ,Model model){
+		
+			try {
+				itemService.updateItem(item);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		 
+		return "";
+	}
+}

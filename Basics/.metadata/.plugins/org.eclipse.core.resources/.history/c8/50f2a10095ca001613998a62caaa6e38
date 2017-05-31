@@ -1,0 +1,89 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Test04 {
+
+	/*
+	 * 分析以下需求，并用代码实现： (1)定义一个Worker类型(属性私有、空参有参构造、set、get方法、toString方法)，
+	 * 包含三个属性：姓名(String name)、年龄(int age)、工资(double salary),
+	 * 在Worker类中定义work方法打印一句话， 如："凤姐 正在工作"，其中"凤姐"代表当前对象的姓名
+	 * (2)定义List集合，在List集合中增加三个员工，基本信息如下： "凤姐" 18 20000 "欧阳峰" 60 8000 "刘德华" 40
+	 * 30000 (3)在"欧阳峰"之前插入一个员工，信息为：姓名："张柏芝"，年龄：35，工资3300 (4)删除"刘德华"的信息 (5)利用for
+	 * 循环遍历，打印List 中所有员工的信息 (6)利用迭代遍历，对List 中所有的员工调用work 方法
+	 */
+	public static void main(String[] args) {
+		ArrayList<Worker> list = new ArrayList<>();
+		list.add(new Worker("凤姐", 18, 20000));
+		list.add(new Worker("欧阳峰", 60, 8000));
+		list.add(new Worker("刘德华", 40, 30000));
+		list.trimToSize();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getName().equals("刘德华"))
+				list.add(i, new Worker("张柏芝", 35, 3300));
+		}
+
+		ListIterator<Worker> it = list.listIterator();
+		while (it.hasNext()) {
+			if (it.next().getName().equals("刘德华"))
+				it.remove();
+		}
+		
+		System.out.println(list);
+
+	}
+}
+
+class Worker {
+	private String name;
+	private int age;
+	private double salary;
+
+	public Worker(String name, int age, double salary) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+
+	public Worker() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Worker [name=" + name + ", age=" + age + ", salary=" + salary
+				+ "]";
+	}
+
+	public void work() {
+		System.out.println(this.name + "正在工作");
+	}
+
+}

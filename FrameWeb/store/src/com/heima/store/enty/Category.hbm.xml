@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-20 17:50:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.heima.store.enty.Category" table="CATEGORY">
+        <id name="cid" type="java.lang.String">
+            <column name="CID" />
+            <generator class="uuid" />
+        </id>
+        <property name="cname" type="java.lang.String">
+            <column name="CNAME" />
+        </property>
+        <!-- 
+			set标签 ：
+				* name	：多的一方的对象集合的属性名称。
+				* cascade：级联
+				* inverse：放弃外键维护权。
+		-->
+        <set name="product" table="PRODUCT" inverse="false" lazy="true" cascade="save-update">
+        <!--
+				 key标签
+					* column：多的一方的外键的名称。
+			 -->
+            <key>
+                <column name="PID" />
+            </key>
+            <!-- 
+				one-to-many标签
+					* class	:多的一方的类的全路径
+			 -->
+            <one-to-many class="com.heima.store.enty.Product" />
+        </set>
+    </class>
+</hibernate-mapping>

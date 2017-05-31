@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Mon May 15 08:44:47 CST 2017
+org.eclipse.jst.jee.server\:erp_web=D\:\\Tomcat7.0x\\webapps\\erp_web
+org.eclipse.jst.jee.server\:/binary\:D\:\\Maven\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=D\:\\Tomcat7.0x\\webapps\\erp_web\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar
+org.eclipse.jst.j2ee.server\:erp_dao=D\:\\Tomcat7.0x\\webapps\\erp_web\\WEB-INF\\lib\\erp_dao-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:erp_client=D\:\\Tomcat7.0x\\webapps\\erp_web\\WEB-INF\\lib\\erp_client-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:erp_biz=D\:\\Tomcat7.0x\\webapps\\erp_web\\WEB-INF\\lib\\erp_biz-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:erp_entity=D\:\\Tomcat7.0x\\webapps\\erp_web\\WEB-INF\\lib\\erp_entity-0.0.1-SNAPSHOT.jar

@@ -1,0 +1,21 @@
+package com.heima.store.service.serviceimp;
+
+import java.awt.image.BufferedImage;
+
+import com.heima.store.service.ChackCodeService;
+
+public class ChackCodeServiceImpl implements ChackCodeService {
+
+	@Override
+	public void CreateChackCode() {
+		// TODO Auto-generated method stub
+		BufferedImage image = new BufferedImage(40, 30, BufferedImage.TYPE_INT_RGB);
+	}
+
+	@Override
+	public int getNum() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

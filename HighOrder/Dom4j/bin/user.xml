@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE users SYSTEM "user.dtd">
+<users>
+	<user>
+		<name>张三</name>
+		<age>23</age>
+		<sail>12k</sail>
+	</user>
+	
+	
+	<user>
+		<name>李四</name>
+		<age>24</age>
+		<sail>15k</sail>
+	</user>
+
+</users>

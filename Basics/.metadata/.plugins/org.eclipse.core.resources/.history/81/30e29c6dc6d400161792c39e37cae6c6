@@ -1,0 +1,134 @@
+1.StringBuffer
+	1.是一个可变的字符序列.(字符串的缓冲区)
+
+	2.是从JDK1.0的时候出现的,是线程安全的!
+
+	3.构造方法:
+		StringBuffer(): 这个构造方法的初始容量是:16个字符
+		StringBuffer(int 容量): 在创建字符串缓冲区的时候指定它的初始容量(了解)
+		StringBuffer(String): 在创建字符串缓冲区的时候,添加初始内容
+
+
+	4.常用方法:
+		1.添加方法:
+			append(Object): 向字符串缓冲区追加内容
+			insert(int,Object): 在指定位置插入内容
+
+		2.删除方法:
+			deleteCharAt(index): 删除指定位置的字符
+			delete(startIndex,endIndex): 删除从指定位置开始到指定位置结束的字符串,不包含结束位置!
+
+			delete(0,sb.length());//可以清空缓冲区
+
+		3.替换和反转的方法:
+			replace(开始位置,结束位置,替换的内容): 替换缓冲区中的字符串
+			reverse(): 把缓冲区中的字符串反转
+
+		4.截取字符串:
+			substring(index) 
+			substring(开始位置,结束位置)
+
+		5.String和StringBuffer互相转换:
+			String--->StringBuffer:
+				①构造方法
+				②append方法
+
+			StringBuffer--->String
+				①构造方法
+				②toString方法
+				③substring方法
+
+		
+	5.String和StringBuffer,StringBuilder的区别:
+		String是一个不可变的字符序列
+		StringBuffer和StringBuilder都是可变的字符序列
+
+		StringBuffer是线程安全的,效率低, 从JDK1.0出现的
+		StringBuilder是线程不安全的,效率高,从JDK1.5出现的!
+
+	
+	6.String作为方法的参数传递时, 在方法中对它做了修改, 不会影响到原来的变量的值.
+		因为String的值一旦初始化就不可以改变!
+
+
+2.数组高级应用
+	1.冒泡排序
+		
+		for(int i=0;i<arr.length-1;i++){
+			for(int j=0;j<arr.length-1-i;j++){
+				if(arr[j]>arr[j+1]){
+					int temp = arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+
+
+	2.选择排序
+		
+		for(int i=0;i<arr.length-1;i++){
+			for(int j = i+1;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					int temp = arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+
+
+	3.二分查找
+		
+
+
+	4.工具类
+		toString(): 把数组转成字符串
+		sort(): 对数组进行排序
+		binarySearch(): 二分查找
+
+3.包装类
+	1.包装类就是基本数据类型对应的引用类型
+
+	2.包装类的作用:
+		可以更方便地操作基本数据类型
+
+	3.基本类型对应的包装类:
+		byte			Byte
+		short			Short	
+		char	--->	Character
+		int		--->	Integer
+		long			Long
+		float			Float
+		double			Double
+		boolean			Boolean
+
+	4.Integer构造方法:
+		Integer(int): 把一个基本类型的值封装成引用数据类型
+		Integer(String): 把一个数字字符串转换成包装类对象
+
+	5.基本类型int与String之间的转换:
+		int--->String :
+			10+"";
+
+		String-->int
+			包装类的parseInt方法
+			int x = Integer.parseInt("100");
+
+		注意事项:
+			八种包装类中, 有七种是有parseXxx方法的,只有Character这个包装类没有!
+
+	6.自动装箱和拆箱:
+		自动装箱:
+			把基本数据类型转换成包装类的对象:
+				Integer i = 100;// Integer i = new Integer(100);
+
+		自动拆箱:
+			把包装类的对象转换成基本数据类型:
+				int z = i+100;  // int z = i.intValue() + 100;
+
+	7.面试题:
+		通过自动装箱获取到的对象,如果是在byte的取值范围内的, 不会创建对象, 而是从常量池中获取该对象. 
+	
+
+

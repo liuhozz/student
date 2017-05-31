@@ -1,0 +1,26 @@
+package com.heima.Test;
+
+public class Test02 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Thread1 t1=new Thread1();
+		Thread t=new Thread(t1);*/
+		System.out.println(35/10);
+		
+	}
+
+}
+
+class Thread1 implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

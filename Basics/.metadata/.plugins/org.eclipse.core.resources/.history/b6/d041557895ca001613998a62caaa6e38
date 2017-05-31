@@ -1,0 +1,54 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class Test02 {
+
+	/**
+	 *2.分析以下需求，并用代码实现：
+		(1)定义List集合，使用键盘录入存入多个字符串,当输入"quit"字符串时结束输入
+		(2)删除集合中字符串"def"
+		(3)然后利用迭代器遍历集合元素并输出
+		
+		删除集合中的def字符串
+			方法一:在录入的时候判断输入的字符串是否为def是的话就不执行add方法
+			
+	 */
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		
+		while (true){
+			String s=sc.next();
+			
+			if(s.equals("quit")){
+				break;
+			}else{
+				list.add(s);
+			}
+		}
+		
+		for (int i=0;i<list.size();i++) {
+			int index=list.indexOf("def");
+			
+			list.remove(index);
+		}
+		//System.out.println(list);				为什么这样打印的时候会报数组越界异常    而用迭代器有不会有这个异常
+		for (String string : list) {
+			System.out.println(string);
+		}
+		
+		
+		/*ListIterator<String> lit=list.listIterator();
+		while(lit.hasNext()){
+			String str=(String)lit.next();
+			str.equals("def") ? lit.remove(): System.out.println(str);
+		}*/
+		
+		
+	}
+
+}

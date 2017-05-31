@@ -1,0 +1,39 @@
+package com.heima.springmvc.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.heima.springmvc.erorr.MyException;
+import com.heima.springmvc.mapper.ItemMapper;
+import com.heima.springmvc.pojo.Item;
+import com.heima.springmvc.service.ItemService;
+
+@Service
+public class ItemServiceImpl implements ItemService {
+
+	@Autowired
+	private ItemMapper itemMapper;
+	
+	public List<Item> getItemList() {
+		// TODO Auto-generated method stub
+		return itemMapper.selectByExample(null);
+	}
+
+	public void updateItem(Item item) throws Exception{
+		// TODO Auto-generated method stub
+		 
+		int row = itemMapper.updateByPrimaryKeySelective(item);
+		
+		if(row <= 0){
+			throw new MyException("修改失败");
+		}
+			
+		
+		
+		
+	}
+
+	
+}

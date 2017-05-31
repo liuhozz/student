@@ -1,0 +1,40 @@
+package com.heima.Test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Test02 {
+
+	/**
+	 * 在课堂上的文本文件中的每一行反转的基础上,对每一行的内容也进行反转!
+			例如,原文本的内容是:abc
+								def
+								hjk
+			反转后的内容是:kjh
+						   fed
+						   cba
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new FileReader("zzz.txt"));
+		ArrayList<String> list = new ArrayList<>();
+		String line;
+		while ((line = br.readLine()) != null) {
+			list.add(line);
+		}
+		br.close();
+		BufferedWriter bw = new BufferedWriter(new FileWriter("1.txt"));
+		for (int i = list.size() - 1; i >= 0; i--) {
+			bw.write(list.get(i));
+			bw.newLine();
+		}
+
+		bw.close();
+	}
+
+}

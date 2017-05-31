@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+       "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="common" extends="struts-default" namespace="/hos">
+	    <!--用户登录--> 
+		<action name="login" class="com.hos.actions.LoginAction">
+			<result name="loginsuccess">/hospitalSystem.jsp</result>
+			<result name="loginerror">/HtLogin.jsp</result>
+		</action>
+		<!--用户注册--> 
+		<action name="zhuce" class="com.hos.actions.LoginAction" method="save">
+			<result name="savesuccess">/HtLogin.jsp</result>
+			<result name="saveerror">/zhuce.jsp</result>
+		</action>
+		<!--图片视频信息上传-->
+		<action name="list" class="com.hos.actions.ImgVedioAction"
+			method="list">
+			<result name="savesuccess" type="redirectAction">find</result>
+		</action>
+		<!--图片视频信息删除-->
+		<action name="delete" class="com.hos.actions.ImgVedioAction"
+			method="delete">
+			<result name="success" type="redirectAction">find</result>
+		</action>
+		<!--图片视频信息查询-->
+		<action name="find" class="com.hos.actions.ImgVedioAction">
+			<result name="success">/IVInfo.jsp</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--科室信息查询-->
+		<action name="findks" class="com.hos.actions.KeshiAction"
+			method="findks">
+			<result name="success">/keshiInfo.jsp</result>
+		</action>
+		<!--前台科室名字查询-->
+		<action name="findks1" class="com.hos.actions.KeshiAction"
+			method="findks">
+			<result name="success">/keshiname_before.jsp</result>
+		</action>
+		<!--前台科室标题查询-->
+		<action name="findks2" class="com.hos.actions.KeshiAction"
+			method="findks">
+			<result name="success">/NewsTilte_before.jsp</result>
+		</action>
+		<!--科室信息删除-->
+		<action name="deleteks" class="com.hos.actions.KeshiAction"
+			method="deleteks">
+			<result name="success" type="redirectAction">findks</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--编辑科室信息-->
+		<action name="editks" class="com.hos.actions.KeshiAction"
+			method="updateks">
+			<result name="success" type="redirectAction">findks</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--科室信息录入-->
+		<action name="saveks" class="com.hos.actions.KeshiAction">
+			<result name="success" type="redirectAction">findks</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--动态显示科室介绍功能-->
+		<action name="showKS" class="com.hos.actions.KeshiAction" method="showIntro">
+			<result name="success" >/keshiInfo_before.jsp</result>
+		</action>
+		<!--动态显示新闻公告功能-->
+		<!-- <action name="showKS" class="com.hos.actions.KeshiAction" method="showIntro">
+			<result name="success" >/News_before.jsp</result>
+		</action> -->
+		<!--专家信息查询-->
+		<action name="findSE" class="com.hos.actions.Specialist_ExpertAction"
+			method="findSE">
+			<result name="success">/SEInfo.jsp</result>
+		</action>
+		<!--前台专家信息查询-->
+		<action name="findSE_bf" class="com.hos.actions.Specialist_ExpertAction"
+			method="findSE">
+			<result name="success">/SEname_before.jsp</result>
+		</action>
+		<!--专家信息删除-->
+		<action name="deleteSE" class="com.hos.actions.Specialist_ExpertAction"
+			method="deleteSE">
+			<result name="success" type="redirectAction">findSE</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--专家信息录入-->
+		<action name="saveSE" class="com.hos.actions.Specialist_ExpertAction">
+			<result name="success" type="redirectAction">findSE</result>
+			<result name="error">/hospitalSystem.jsp</result>
+		</action>
+		<!--动态显示专家介绍功能-->
+		<action name="showSE" class="com.hos.actions.Specialist_ExpertAction" method="introduceSE">
+			<result name="success" >/SEInfo_before.jsp</result>
+		</action>
+		<action name="upload" class="com.hos.actions.upload" >
+			<result name="success" >/success.jsp</result>
+		</action>
+	</package>
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<constant name="age" value="35" />
+</struts>

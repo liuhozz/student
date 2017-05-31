@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        ">
+	<!-- 将sessionFactory的创建交给spring -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+	</bean>
+
+	<!-- 将Struts2的action交给spring创建必须要配置为多例 注入service -->
+	<bean id="userAction" class="com.heima.ssh.web.action.UserAction"
+		scope="prototype">
+		<property name="userService" ref="userService" />
+	</bean>
+	<bean id="customerAction" class="com.heima.ssh.web.action.CustomerAction" scope="prototype">
+		<property name="customerService" ref="customerService"></property>
+	</bean>
+	<bean id="daseDictAction" class="com.heima.ssh.web.action.DaseDictAction" scope="prototype">
+		<property name="daseDictService" ref="daseDictService"></property>
+	</bean>
+
+	<!-- 创建userservice -->
+	<bean id="userService" class="com.heima.ssh.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+
+	<!-- 创建userdao -->
+	<bean id="userDao" class="com.heima.ssh.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 创建daseDictService -->
+	<bean id="daseDictService" class="com.heima.ssh.service.impl.DaseDictServiceImpl">
+		<property name="daseDictDao" ref="daseDictDao"></property>
+	</bean>
+	<!-- 创建daseDictDao -->
+	<bean id="daseDictDao" class="com.heima.ssh.dao.impl.DaseDictDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 创建customerService -->
+	<bean id="customerService" class="com.heima.ssh.service.impl.CustomerServiceImpl">
+		<property name="customerDao" ref="customerDao"></property>
+	</bean>
+	<!-- 创建customerDao -->
+	<bean id="customerDao" class="com.heima.ssh.dao.impl.CustomerDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 创建事务管理平台 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 配置事务管理的增强 类似配置切面 主要运用的就是AOP思想 -->
+	<tx:advice transaction-manager="transactionManager" id="txadvice">
+		<tx:attributes>
+			<!-- <tx:method name="save*"(对哪个方法开启事务)  propagation="REQUIRED"(事物的传播行为) isolation="DEFAULT"(事务的隔离级别)/> -->
+			<tx:method name="*" isolation="DEFAULT" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+	<!-- 配置了事务的增强后要进行AOP的配置    execution-->
+	<aop:config>
+		<aop:pointcut expression="execution(* com.heima.ssh.service.impl.*.*(..))" id="pointcut1"/>
+		<aop:advisor advice-ref="txadvice" pointcut-ref="pointcut1"/>
+		
+		
+					
+	</aop:config>
+</beans>

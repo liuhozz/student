@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://www.springframework.org/schema/beans/spring-beans.xsd" uri="file:///E:/Maven/dtd-schema/spring-beans.xsd"/>
+  <system systemId="http://www.springframework.org/schema/context/spring-context.xsd" uri="file:///E:/Maven/dtd-schema/spring-context.xsd"/>
+  <system systemId="http://www.springframework.org/schema/tx/spring-tx.xsd" uri="file:///E:/Maven/dtd-schema/spring-tx.xsd"/>
+  <system systemId="http://www.springframework.org/schema/aop/spring-aop.xsd" uri="file:///E:/Maven/dtd-schema/spring-aop.xsd"/>
+  <system systemId="http://www.springframework.org/schema/tool/spring-tool.xsd" uri="file:///E:/Maven/dtd-schema/spring-tool.xsd"/>
+  <public publicId="-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" uri="file:///E:/Maven/dtd-schema/struts-2.3.dtd"/>
+  <public publicId="-//Hibernate/Hibernate Mapping DTD 3.0//EN" uri="file:///E:/Maven/dtd-schema/hibernate-mapping-3.0.dtd"/>
+</catalog>

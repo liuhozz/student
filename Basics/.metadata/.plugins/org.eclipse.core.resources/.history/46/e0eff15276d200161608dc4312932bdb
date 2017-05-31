@@ -1,0 +1,2 @@
+ileReader("aaa.txt");				//创建输入流对象,关联aaa.txt
+		in

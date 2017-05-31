@@ -1,0 +1,47 @@
+package com.heima.Test;
+
+public class Test01 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+/*
+ * 单例设计模式
+ */
+class X {
+	private X(){}
+	private static X x=new X();
+	public static X getX() {
+		return x;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

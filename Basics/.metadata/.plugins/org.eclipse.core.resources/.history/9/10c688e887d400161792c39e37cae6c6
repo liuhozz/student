@@ -1,0 +1,51 @@
+package com.heima.Test;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Test03 {
+
+	/**
+	 * 拷贝文件夹
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入一个文件夹路径:");
+		String line = sc.nextLine();
+
+		File src = Test01.getDir(line);
+		File dest = Test01.getDir(line);
+		CopyDir(src, dest);
+	}
+
+	public static void CopyDir(File src, File dest) throws IOException {
+		// TODO Auto-generated method stub
+		File newDir = new File(dest, src.getName());
+		newDir.mkdir();
+		File[] copy = src.listFiles();
+		for (File file : copy) {
+			if (file.isFile()) {
+				BufferedInputStream bis = new BufferedInputStream(
+						new FileInputStream(file));
+				BufferedOutputStream bos = new BufferedOutputStream(
+						new FileOutputStream(new File(newDir, file.getName())));
+				int l;
+				while ((l = bis.read()) != -1) {
+					bos.write(l);
+				}
+				bis.close();
+				bos.close();
+			} else {
+				CopyDir(file, newDir);
+			}
+		}
+	}
+
+}

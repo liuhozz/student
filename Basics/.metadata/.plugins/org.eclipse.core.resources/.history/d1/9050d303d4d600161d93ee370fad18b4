@@ -1,0 +1,14 @@
+package com.heima.zy;
+
+public class Zy01 {
+
+	/**
+	 *  写一个程序,模拟迅雷下载进度,开启两个线程,模拟下载同一个文件, 
+		每个线程对文件下载进度加10,耗时1秒钟, 当进度为100时,程序停止.
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

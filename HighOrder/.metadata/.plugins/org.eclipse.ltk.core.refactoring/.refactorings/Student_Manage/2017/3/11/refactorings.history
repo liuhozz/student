@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;IslongingCookie.java&apos; to &apos;store/src/com.heima.store.utils&apos;&#x0D;&#x0A;- Original project: &apos;Student_Manage&apos;&#x0D;&#x0A;- Destination element: &apos;store/src/com.heima.store.utils&apos;&#x0D;&#x0A;- Original element: &apos;com.heima.util.IslongingCookie.java&apos;" description="Copy compilation unit" destination="=store/src&lt;com.heima.store.utils" element1="/src&lt;com.heima.util{IslongingCookie.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1489654599831" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri May 26 18:32:54 CST 2017
+org.eclipse.jst.jee.server\:Test_LHZ=D\:\\Tomcat7.0x\\webapps\\Test_LHZ
+org.eclipse.jst.jee.server\:/binary\:E\:\\Eclipse\\SSM\\Test_LHZ\\WebContent\\WEB-INF\\lib\\spring-web-4.1.3.RELEASE.jar=D\:\\Tomcat7.0x\\webapps\\Test_LHZ\\WEB-INF\\lib\\spring-web-4.1.3.RELEASE.jar

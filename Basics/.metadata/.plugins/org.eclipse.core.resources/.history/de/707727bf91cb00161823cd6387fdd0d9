@@ -1,0 +1,41 @@
+package com.heima.Test;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+@SuppressWarnings("unused")
+public class Test5 {
+
+	/**
+	 * 编写一个泛形方法，接收一个任意引用类型数组，并反转数组中的所有元素
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String [] arr={"aa","bb","cc","dd","ee","ff","gg"};
+		
+		reverse(arr);
+		System.out.println(arr);
+	}
+	public static <T> void reverse(T [] arr){
+		/*
+		 * 方法一
+		 * 		常规做法
+		 */
+		/*for (int i = 0; i < arr.length/2; i++) {
+			T t=arr[i];
+			arr[i]=arr[arr.length-1-i];
+			arr[arr.length-1-i]=t;
+		}*/
+		
+		/*
+		 * 方法二
+		 * 		将数组转换成集合  在调用collections.reverse()在将装换后的集合转换成数组
+		 */
+		List<T> list=Arrays.asList(arr);
+		Collections.reverse(list);
+		T [] arr1=list.toArray(arr.toString());
+	}
+	
+	
+}

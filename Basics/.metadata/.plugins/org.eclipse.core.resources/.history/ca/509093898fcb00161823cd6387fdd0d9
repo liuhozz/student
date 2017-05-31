@@ -1,0 +1,50 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+
+public class Test6 {
+
+	/**
+	 * 编写一个方法addAll(list1,list2),接收两个集合,把第二个集合中的所有元素添加到第一个集合中,不能使用集合中的addAll方法.
+	 */
+	public static void main(String[] args) {
+		ArrayList<String> list1=new ArrayList<>();
+		list1.add("dd");
+		list1.add("ss");
+		list1.add("aa");
+		list1.add("qq");
+		list1.add("aa");
+		list1.add("gg");
+		
+		ArrayList<String> list2=new ArrayList<>();
+		list2.add("dd");
+		list2.add("ss");
+		list2.add("aa");
+		
+		//System.out.println(addAll(list1, list2));
+		addAll(list1, list2);
+		System.out.println(list1);
+		
+	}
+	
+	/*
+	 * 想法一:
+	 * 		定义一个嵌套ArrayList集合然后用外面的集合Add里面的集合
+	 */
+	/*public static <T>  ArrayList<ArrayList<T>> addAll(ArrayList<T> list1,ArrayList<T> list2){
+		ArrayList<ArrayList<T>> list3=(ArrayList<ArrayList<T>>) list1;
+		list3.add(list2);
+		return list3;
+		
+	}*/
+	
+	/*
+	 * 想法二
+	 * 		遍历第二个集合   将第二个集合中的元素add到第一个集合中
+	 */
+	public static <T> void addAll(ArrayList<T> list1,ArrayList<T> list2){
+		for (int i = 0; i < list2.size(); i++) {
+			list1.add(list2.get(i));
+		}
+	}
+}

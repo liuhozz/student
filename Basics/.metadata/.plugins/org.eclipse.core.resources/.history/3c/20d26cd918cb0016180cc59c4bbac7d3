@@ -1,0 +1,16 @@
+package com.heima.day16;
+
+public class Test1_repetition {
+
+	/**
+	 * 在arrayList中去除重复的元素
+	 * 	思路:
+	 * 		用一个新集合接收
+	 * 		
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

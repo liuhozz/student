@@ -1,0 +1,8 @@
+package org.my.eat;
+
+public class Xss extends Eat{
+
+	public void aa(){
+		
+	}
+}

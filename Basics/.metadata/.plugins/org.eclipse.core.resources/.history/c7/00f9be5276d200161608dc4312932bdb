@@ -1,0 +1,2 @@
+ew FileReader("a.txt");
+	FileWriter fw = new File

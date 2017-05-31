@@ -1,0 +1,20 @@
+package com.heima.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class JDBCResourceOver {
+	
+	private static void Ovreconn(Connection conn){
+		try {
+			if(conn!=null){
+			conn.close();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			conn=null;
+		}
+	}
+}

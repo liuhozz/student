@@ -1,0 +1,168 @@
+��һȡ�̶��Ӽ�redaeRdereffuB��ʹ��.3 *
+���ļ�����8-FTU����KBG�ַ���дretirWdereffuB����.2 *
+�ַ�����8-FTU����KBGȡ��redaeRdereffuB����.1 *
+)�ܽ�(��OI_61.12###
+�����빺�ʾ����������,��λ��м�����һʾ���ξ�һ��ִ,��λ�01����,����ð�����ģ,ʶ֪��OI���ѧ����û�ʹ�ٴ��ж��ǻ��������ͻξ�һ��ִÿ,��ʱ�������й�û,����ð�����һ���������� *
+)����ð���(��OI_51.12###
+
+��txt.semit��д�����,���Ĵֵ���ַ���ÿ���ı���һȡ�� *
+)���Ĵֵ���ַ����ı�ȡ��(��OI_41.12###
+
+����ת����ͼ�� *
+)��ͼ����ת(��OI_31.12###
+;)(esolc.wb		
+;)(esolc.rb		
+		
+}		
+;)hc(etirw.wb			
+{ )1- =! ))(daer.rb = hc((elihw		
+;hc tni		
+;))"KBG" ,)"txt.KBG"(maertStuptuOeliF wen(retirWmaertStuptuO wen(retirWdereffuB wen				
+д����ı���ָ����Ч��//									 = wb retirWdereffuB		
+;))"8-FTU" ,)"txt.8-FTU"(maertStupnIeliF wen(redaeRmaertStupnI wen(redaeRdereffuB wen				
+�����ı���ָ����Ч��//									 = rb redaeRdereffuB		
+ *
+)�����,���ֽ�(retirWmaertStuptuO��ʹ����ô�� ,��д�����ָ��ʹҪ����� ,�ļ���д�����Ĭ��ʹ��retirWeliF *
+)�����,���ֽ�(redaeRmaertStupnI��ʹ����ô�� ,ȡ������ָ��ʹҪ����� ,�ļ�ȡ������Ĭ��ʹ��redaeReliF *
+ )�ַ�д��������ָ��ʹ(��OI_21.12###
+
+ }		
+			
+}			
+;)"....."(nltnirp.tuo.metsyS				
+;)"׿��"(nltnirp.tuo.metsyS				
+;)"hss"(nltnirp.tuo.metsyS				
+;)"�ݿ��"(nltnirp.tuo.metsyS				
+;)(edoc.s				
+�����ܽ��й�ԭ����//					{ )(edoc diov cilbup			
+edirrevO@			
+}			
+;s = s.siht				
+���Ķ�װ��뱻���,��ʱ������캯���ͨ//		{ )s tnedutS(tnedutStsactI cilbup			
+���������װ������ȡ��//						;s tnedutS etavirp			
+{ redoC stnemelpmi tnedutStsactI ssalc		
+		
+}		
+			
+}			
+;)"bewavaj"(nltnirp.tuo.metsyS				
+;)"esavaj"(nltnirp.tuo.metsyS				
+{ )(edoc diov cilbup			
+edirrevO@			
+		
+{ redoC stnemelpmi tnedutS ssalc		
+		
+}		
+;)(edoc diov cilbup			
+{ redoC ecafretni		
+ *
+
+)ʽģ�����װ(��OI_11.12###
+
+ ;)(esolc.rnl		
+		
+}		
+�к�ȡ��//;)enil + ":" + )(rebmuNeniLteg.rnl(nltnirp.tuo.metsyS			
+{ )llun =! ))(eniLdaer.rnl = enil((elihw		
+�к�����//									;)001(rebmuNeniLtes.rnl		
+;enil gnirtS		
+;))"txt.aaa"(redaeReliF wen(redaeRrebmuNeniL wen = rnl redaeRrebmuNeniL		
+ *
+�к�ǰ�õ�����������)(rebmuNeniLtes���� *	
+�к�ǰ��ȡ�Ի�������)(rebmuNeniLteg���� *	
+�к���ͳ���ҿ��� ,���Ĺ�ͬ������ ,������redaeRdereffuB��redaeRrebmuNeniL *
+ )redaeRrebmuNeniL(��OI_01.12###
+
+���н��ڶ���͵к��ڶ�,���н�һ����͵к�һ��,ת���ı��ϵ��ĵ��ı���һ�� *
+)ת���ı���(��OI_90.12###
+
+ ;)(esolc.wb		
+;)(esolc.rb		
+		
+}		
+��̨ƽ��//						;)(eniLwen.wb			
+ͳϵswodniw��ֻ֧//					;)"n\r\"(etirw.wb//			
+;)enil(etirw.wb			
+{ )llun =! ))(eniLdaer.rb = enil((elihw		
+;enil gnirtS		
+;))"txt.bbb"(retirWeliF wen(retirWdereffuB wen = wb retirWdereffuB		
+;))"txt.aaa"(redaeReliF wen(redaeRdereffuB wen = rb redaeRdereffuB		
+ *
+"n\r\"��з��Ļ�̨ƽ����һ�������)(eniLwen��retirWdereffuB *
+)��з�����(�ַ���һȡ�Զ�������)(eniLdaer��redaeRdereffuB *
+	)����)(eniLwen��)(eniLdaer(��OI_80.12###
+
+
+  ;)(esolc.wb		
+����//							;)(esolc.rb		
+		
+}		
+ȥ��д��һ�����װ,�����ַ���װ����ǽ�,��һetirw//					;)hc(etirw.wb			
+hc����ʱ�����ķ���һ��һ��ȥ���ӻ�,����������Ƚ���,��һdaer//		{ )1- =! ))(daer.rb = hc((elihw		
+				;hc tni		
+		
+txt.bbb����,����������ַ�����//	;))"txt.bbb"(retirWeliF wen(retirWdereffuB wen = wb retirWdereffuB		
+txt.aaa����,�����������ַ�����//	;))"txt.aaa"(redaeReliF wen(redaeRdereffuB wen = rb redaeRdereffuB		
+ *
+��Ч��� ,���Ĵ��ļ�д���� ,�ļ���д�Ż�ʱ��д������ ,��������д����ʱ�ַ���д����)(etirw��retirWdereffuB *
+��Ч��� ,���Ĵ��ļ�ȡ�Ͷ��� ,����ظ��������Ȼ ,�����ַ�����ȡ�ζ�һ��ʱ�ַ�ȡ������)(daer��redaeRdereffuB *
+ )���ַ�����(��OI_70.12###
+
+	;)(esolc.wf		
+Դ���ͷ�����//											;)(esolc.rf		
+		
+}		
+���ļ���д���齫����ַ���//							;)nel ,0 ,rra(etirw.wf			
+�������ַ����ݶ����//					{ )1- =! ))rra(daer.rf = nel((elihw		
+�����ַ�����//						;]8*4201[rahc wen = rra ][rahc		
+;nel tni		
+		
+txt.bbb����,������ַ�����//			;)"txt.bbb"(retirWeliF wen = wf retirWeliF		
+txt.aaa����,�������ַ�����//			;)"txt.aaa"(redaeReliF wen = rf redaeReliF		
+		
+	*
+)���Ŀ�����ַ����Զ�(��OI_60.12###
+
+  ��������,�������ļ����֮��д����,��д��ֱ,?����� *
+ȥ��д�ֽ�����ת�ַ�Ὣ��ʱ����д,����?���ͻ�,�ַ���Ӧ�����Ҳ�����,�������ת��,�ַ�Ϊ��ת�ֽ�Ὣ��ʱ���ڶ�Ϊ�� *
+�ļ����ı��Ǵ����Կ����� *
+)�ļ����ı��Ǵ����Կ���Ƿ����ַ�(��OI_50.12###
+
+�����ֽ�Ϊ��ת����,��д�ַ��ӽ�ֱ�����ʱ����д *
+������ְ������,��ȡ��С�Ĵ�ַ����ǰ���ʱ��ȡ�� *
+���ַ���ʹ�����ʱ���ı���һ��дҪ������ ,�ı���һȡ��Ҫ������ *
+.�ֽ���ת�ַ���Ҫ��ʱ��д ,�ַ�Ϊת�ֽ����ʱȡ��Ϊ�� .��ʹ�Ƽ����� ,�ļ��ı����Կ���Ҳ���ַ� *
+)���ַ���ʹ�����ôʲ(��OI_40.12###
+;)(esolc.wf	
+;)(esolc.rf	
+	
+}	
+;)hc(etirw.wf		
+{ )1- =! ))(daer.rf = hc((elihw	
+;hc tni	
+	
+;)"txt.b"(retirWeliF wen = wf retirWeliF	
+;)"txt.a"(redaeReliF wen = rf redaeReliF	
+)���Ŀ����ַ�(��OI_30.12###
+
+;)(esolc.wf		
+;)"aaa"(etirw.wf		
+;)"txt.aaa"(retirWeliF wen = wf retirWeliF		
+
+��д�ֽ�Ϊת�ַ����Զ���������)(etirw���retirWeliF *
+)retirWeliF���ַ�(��OI_20.12###
+
+ ����//												;)(esolc.rf		
+		
+}		
+ӡ���תǿ�ַ���������//						;)hc)rahc((nltnirp.tuo.metsyS			
+hc��ֵ�ַ���������//							{ )1- =! ))(daer.rf = hc((elihw		
+;hc tni		
+txt.aaa����,��������������//				;)"txt.aaa"(redaeReliF wen = rf redaeReliF		
+ *
+ȡ��С��ַ����԰�������)(daer���redaeReliF *	
+redaeReliF.2 *
+    .��д���ֽ�Ϊת�ַ���Ҫ�� ,�ַ���дҪ��� .�ַ�Ϊת��Ȼ ,����ֽ���ȡ�ȶ�Ҫ�� ,�ַ�ȡ�����ַ� *	
+��OI��ַ�д�Ӷ�ֱ���ǿ����ַ� *	
+ôʲ�����ַ�.1 *
+)redaeReliF���ַ�(��OI_10.12###

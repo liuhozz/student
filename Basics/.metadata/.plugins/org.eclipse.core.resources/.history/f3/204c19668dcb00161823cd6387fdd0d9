@@ -1,0 +1,13 @@
+package com.heima.Test;
+
+public class Test5 {
+
+	/**
+	 * 编写一个泛形方法，接收一个任意引用类型数组，并反转数组中的所有元素
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

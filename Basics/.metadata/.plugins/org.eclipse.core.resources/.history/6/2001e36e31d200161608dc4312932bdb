@@ -1,0 +1,77 @@
+package com.heima.Test;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class Test04 {
+
+	/**
+	 * @param args
+	 * 键盘录入一个文件夹路径, 获取到该文件夹中的所有文件的名字,把所有的文件名保存到当前项目下的info.txt中
+		注意:如果录入的是文件路径或者不存在的路径,提示用户重新输入.
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		//Dome1();
+		//Dome2();
+		//Dome3();
+		BufferedReader br=new BufferedReader(new FileReader(""));
+		BufferedWriter bw=new BufferedWriter(new FileWriter(""));
+		
+		ArrayList<String> list=new ArrayList<>();
+		String line;
+		while((line=br.readLine()) != null){
+			list.add(line);
+		}
+		for (int i = list.size()-1; i >=0 ; i--) {
+			bw.write(list.get(i));
+			bw.newLine();
+		}
+		
+		br.close();
+		bw.close();
+		
+	}
+
+	public static void Dome3() throws FileNotFoundException, IOException {
+		FileReader fr = new FileReader("");
+		FileWriter fw = new FileWriter("");
+		char arr[] = new char[1024 * 9];
+		int len;
+		while ((len = fr.read(arr)) != -1) {
+			fw.write(arr, 0, len);
+		}
+		fr.close();
+		fw.close();
+	}
+
+	public static void Dome2() throws FileNotFoundException, IOException {
+		FileReader fr=new FileReader("");
+		FileWriter fw=new FileWriter("");
+		int c;
+		while((c=fr.read())!=-1){
+			fw.write(c);
+		}
+		
+		fr.close();
+		fw.close();
+	}
+
+	public static void Dome1() throws FileNotFoundException, IOException {
+		FileReader fr=new FileReader("");
+		
+		int c=fr.read();
+		
+		char a=(char) c;
+		fr.close();
+	}
+
+}

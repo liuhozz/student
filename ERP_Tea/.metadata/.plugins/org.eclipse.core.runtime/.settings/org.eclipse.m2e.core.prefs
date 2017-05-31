@@ -1,0 +1,7 @@
+eclipse.m2.defaultRuntime=apache-maven-3.3.9
+eclipse.m2.runtimes=apache-maven-3.3.9
+eclipse.m2.runtimesNodes/apache-maven-3.3.9/extensions=P/erp_web|P/erp_parent|P/erp_entity|P/erp_dao|P/erp_biz
+eclipse.m2.runtimesNodes/apache-maven-3.3.9/location=D\:\\Maven\\apache-maven-3.3.9
+eclipse.m2.runtimesNodes/apache-maven-3.3.9/type=EXTERNAL
+eclipse.m2.userSettingsFile=D\:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml
+eclipse.preferences.version=1

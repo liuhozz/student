@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-20 17:50:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.heima.store.enty.Product" table="PRODUCT">
+        <id name="pid" type="java.lang.String">
+            <column name="PID" />
+            <generator class="uuid" />
+        </id>
+        <property name="pname" type="java.lang.String">
+            <column name="PNAME" />
+        </property>
+        <property name="market_price" type="java.lang.Double">
+            <column name="MARKET_PRICE" />
+        </property>
+        <property name="shop_price" type="java.lang.Double">
+            <column name="SHOP_PRICE" />
+        </property>
+        <property name="pimage" type="java.lang.String">
+            <column name="PIMAGE" />
+        </property>
+        <property name="pdate" type="java.util.Date">
+            <column name="PDATE" />
+        </property>
+        <property name="is_hot" type="java.lang.Integer">
+            <column name="IS_HOT" />
+        </property>
+        <property name="pdesc" type="java.lang.String">
+            <column name="PDESC" />
+        </property>
+        <property name="pflag" type="java.lang.String">
+            <column name="PFLAG" />
+        </property>
+        <many-to-one name="category" class="com.heima.store.enty.Category">
+            <column name="PID" />
+        </many-to-one>
+        
+        
+        
+    </class>
+</hibernate-mapping>

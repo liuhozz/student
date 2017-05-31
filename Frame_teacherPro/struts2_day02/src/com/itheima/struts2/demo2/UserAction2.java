@@ -1,0 +1,51 @@
+package com.itheima.struts2.demo2;
+
+import com.itheima.struts2.domain.User;
+import com.opensymphony.xwork2.ActionSupport;
+/**
+ * 数据封装的方式二：属性驱动-在页面中提供表达式的方式
+ * @author jt
+ *
+ */
+public class UserAction2 extends ActionSupport {
+	
+	/*// 提供一个User对象:
+	private User user;
+	// 提供user的set和get方法：一定要提供get方法。
+	// 因为拦截器完成数据封装，需要创建User对象。通过get方法可以获得同一个对象，将数据封装到同一个对象中。
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@Override
+	public String execute() throws Exception {
+		System.out.println(user);
+		return NONE;
+	}*/
+	
+	/**
+	 * 属性驱动方法二: 
+	 * 在jsp页面中运用OGNL表达式使得拦截器params自动封装到对象里
+	 * 在action中要提供私有化对象并提供set/get方法
+	 */
+	
+	private User user;
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println(user);
+		
+		return INPUT;
+	}
+}

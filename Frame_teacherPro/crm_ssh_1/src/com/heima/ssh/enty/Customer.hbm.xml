@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<!--cust_id   
+		cust_name 
+		cust_source 
+		cust_industry
+		cust_level 
+		cust_phone 
+		cust_mobile
+	-->
+	<class name="com.heima.ssh.enty.Customer" table="cst_customer">
+		<id name="cust_id" column="cust_id">
+			<generator class="native"></generator>	
+		</id>
+		
+		<property name="cust_name" column="cust_name"/>
+		<!-- <property name="cust_source" column="cust_source"/>
+		<property name="cust_industry" column="cust_industry"/>
+		<property name="cust_level" column="cust_level"/> -->
+		<property name="cust_phone" column="cust_phone"/>
+		<property name="cust_mobile" column="cust_mobile"/>
+		
+		<!-- 与数据字典的关联(由于在查询数据字典的时候不需要差客户出来  所以在数据字典的映射里面不用配置和客户的关联) -->
+		<many-to-one name="daseDictSource" class="com.heima.ssh.enty.DaseDict" column="cust_source"></many-to-one>
+		<many-to-one name="daseDictIndustry" class="com.heima.ssh.enty.DaseDict" column="cust_industry"></many-to-one>
+		<many-to-one name="daseDictLevel" class="com.heima.ssh.enty.DaseDict" column="cust_level"></many-to-one>
+	
+	</class>
+
+
+</hibernate-mapping>

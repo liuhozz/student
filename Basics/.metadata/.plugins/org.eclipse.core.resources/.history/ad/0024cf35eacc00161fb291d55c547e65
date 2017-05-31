@@ -1,0 +1,100 @@
+package com.heima.day12.Test;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test_String {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// String_mothed();
+		// DL();
+		/*
+		 * indexOf 从前面开始查找第一次出现指定字符或字符串的索引 lastIndexOf 从后面开始查找第一次出现指定字符或字符串的索引
+		 * substring 从指定位置截取字符串 包含头 不包含尾  ASCII A 65 a 97 0 48
+		 */
+		// Test_1();
+
+		/*
+		 * replace(char a,char b)替换指定字符 replace(String a,String b);替换指定字符串
+		 * trim()去掉空格 compareTo()比较两个字符串的大小
+		 */
+		// 将"i am student"转换为"student am i"
+		//String_replse();
+		
+		String regex="(.)";
+		String s="asdghas";
+		Pattern p=Pattern.compile(regex);
+		Matcher m=p.matcher(s);
+		m.find();
+		System.out.println(m.group());
+		 
+	}
+
+	public static void String_replse() {
+		String s = "i am student";	
+		
+		 String z=""; String regex = " "; for (int i =
+		 s.split(regex).length-1; i >=0 ; i--) { z+=s.split(regex)[i]+" "; }
+		 System.out.println(z);
+	}
+
+	public static void Test_1() {
+		int counta = 0, countA = 0, countNum = 0, countf = 0;
+		String s = "1C61s6dc1DS661616!$@%#$%#";
+		for (int i = 0; i < s.length(); i++) {
+
+			if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z')
+				counta++;
+			else if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
+				countNum++;
+			else if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')
+				countA++;
+			else {
+				countf++;
+			}
+		}
+		System.out.println("小写有:" + counta + "   大写有:" + countA + "   符号有:"
+				+ countf + "   数字有" + countNum);
+	}
+
+	public static void DL() {
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < 3; i++) {
+			String admin = "admin";
+			String password = "admin";
+			System.out.println("请输入账号:");
+			String input = sc.next();
+			System.out.println("请输入密码:");
+			String inputp = sc.next();
+
+			if (input.equals(admin) && inputp.equals(password)) {
+				System.out.println("登录成功");
+				break;
+			} else {
+				if (i == 2) {
+					System.out.println("已输入3次,没有重新来过的机会了");
+				} else {
+					System.out.println("少侠请重新来过,您还有" + (2 - i) + "次机会");
+
+				}
+			}
+
+		}
+	}
+
+	public static void String_mothed() {
+		String s = "asdf";
+		String s1 = "a";
+		System.out.println(s.contains(s1));// 判断s中是否包含S1
+		System.out.println(s.startsWith(s1));// 判断S是否以某字符串开头
+		System.out.println(s.endsWith(s1));// 判断S是否以某字符串结尾
+		System.out.println(s.isEmpty());// 判断S是否为空
+	}
+
+}

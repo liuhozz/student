@@ -1,0 +1,38 @@
+package com.heima.Test;
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Test01 {
+
+	/**
+	 * .键盘录入5个整数,存储到集合中,遍历输出到控制台上.
+			要求: 1.如果输入的是非整数的内容,程序不会报错,提示用户重新输入
+	      		 2.输出到控制台中的内容必须是从大到小的顺序.
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		TreeSet<Integer> ts=new TreeSet<>();
+			try {while(true){
+		
+				int a=sc.nextInt();
+				
+				ts.add(a);
+				
+				if(ts.size()==3)
+					break;}
+			 }catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("您输入的不是整数,请重新输入");
+				//continue;
+			}
+		
+		System.out.println(ts);
+		
+		
+	}
+
+}

@@ -1,0 +1,113 @@
+
+
+.jqueryslidemenu {
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+	font-size:14px;
+background:url("../img/nav_bg1.jpg")/*tpa=http://www.xy3yy.com/img/nav_bg1.jpg*/ no-repeat; position:relative; height:44px;  z-index:9999;}
+	
+
+.jqueryslidemenu li{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	width:113px;
+	_width:113px;
+	display: block;
+	float: left;
+	line-height:44px;
+	_height:44px;
+/*	position: relative;*/
+	
+}
+.jqueryslidemenu li a {
+	font-weight:bold; text-align:center; font:bold 14px/300% "微软雅黑"; color:#3a3a3a; background:url("../img/nav_x.jpg")/*tpa=http://www.xy3yy.com/img/nav_x.jpg*/ top right no-repeat;
+	display:block; height:44px;
+	
+	
+
+}
+.jqueryslidemenu li a:hover {
+	background:url("../img/nav_hov.gif")/*tpa=http://www.xy3yy.com/img/nav_hov.gif*/ left repeat-x;
+	color:#fff;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li {
+	position: relative; 
+	display: inline;
+	float: left;
+	text-align:center;
+	
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li li a {
+	display: block;
+	background:#fff;/*background of tabs (default state)*/
+	/*filter:alpha(opacity=70); -moz-opacity:0.7; opacity:0.7;*/
+	padding: 0px;
+	margin:0px;
+	color:#000;
+	font-weight:normal;
+	text-decoration: none;
+	font-family:"宋体","微软雅黑", "黑体";  
+
+	
+
+}
+
+.jqueryslidemenu ul li li a:hover {
+	/*background:#f76d00; 子栏目鼠标滑过效果*/ 
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	background:#4f82b3;
+}
+
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul {
+	position: absolute;
+	padding-left:0px;
+	margin-left:0px;
+	display: none;
+	visibility: hidden;
+	z-index:5;
+	
+}
+
+.jqueryslidemenu ul li ul li {
+	display: list-item;
+	float: none;
+	line-height:26px;
+	height:26px;
+	border-bottom:solid 1px #fff; background:none;
+}
+
+
+/* Sub level menu links style  子栏目文字居中 要写宽度  width:90px; margin:0 auto;*/
+.jqueryslidemenu ul li ul li a {
+	/*font-family: 宋体;*/
+	font-size: 12px;
+	width:100px;
+	line-height:26px;
+    _height:26px;
+	/*_border-top: 1px solid  white;*/
+	text-decoration: none;
+	 margin:0 auto; overflow:hidden;
+}
+
+.jqueryslidemenuz ul li ul li a:hover { /*sub menus hover style*/
+	background:#990000;
+}
+.jqueryslidemenu ul li ul li {
+	line-height:26px;
+	_height:26px;
+	overflow:hidden;}
+	
+.jqueryslidemenu ul li ul li a {
+	line-height:26px;
+	_padding-top:1px;
+	_height:26px;
+	}

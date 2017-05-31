@@ -1,0 +1,13 @@
+package org.my.eat;
+
+public class Xdd extends Eat{
+	
+	public static void main(String[] args) {
+		Eat.aa();
+	}
+	
+	public static void aa(){
+		System.out.println("2222");
+	}
+
+}

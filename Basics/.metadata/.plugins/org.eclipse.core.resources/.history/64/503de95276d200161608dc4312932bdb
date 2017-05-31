@@ -1,0 +1,2 @@
+024*8];						//创建字符数组
+		while((len = fr.read(arr)

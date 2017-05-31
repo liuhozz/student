@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hospitalPro"
+  id="myeclipse.1464932845222"
+  context-root="/team2"
+  j2ee-spec="5.0"
+  archive="hospitalPro.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

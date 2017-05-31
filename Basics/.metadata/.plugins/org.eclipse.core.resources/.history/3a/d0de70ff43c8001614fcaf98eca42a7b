@@ -1,0 +1,92 @@
+package com.heima.Test;
+
+import java.util.Arrays;
+
+public class Test01 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*int [] arr=null;
+		int [] arr1={};
+		int [] arr2={1,2,3,4,5,6,7,8,9};
+		
+		System.out.println(new Re2String().toString2(arr));
+		System.out.println(new Re2String().toString2(arr1));
+		System.out.println(new Re2String().toString2(arr2));*/
+		
+		
+		//System.out.println(new ScannerDouble().subnum(5.3612585));
+		//System.out.println(new Replase2().ReToUpp("safjmcnco"));
+		
+	}
+
+}
+
+/*
+ * 1.分析以下需求，并用代码实现：
+		(1)模拟Arrays.toString(int[] arr);方法，自己封装一个public static String toString(int[] arr);
+		(2)如果int类型数组arr为null，toString方法返回字符串"null"
+		(3)如果int类型数组arr长度为0，toString方法返回字符串"[]"
+		(4)如果int类型数组arr的内容为{1,2,3,4,5},toString方法返回字符串"[1, 2, 3, 4, 5]"
+*/
+class Re2String {
+	public StringBuilder toString2(int [] arr){
+		StringBuilder sb=new StringBuilder("[");
+		
+		if(arr==null)
+			return null;
+		
+		if(arr.length==0)
+			return sb.append("]");
+		
+		for (int i = 0; i < arr.length; i++) {
+			
+			if(i!=arr.length-1){
+			sb.append(arr[i]+" ,");
+			}else{
+				sb.append(arr[i]+"]");
+			}
+		}
+		
+		return sb;
+	}
+}
+
+/*
+ * 2.分析以下需求，并用代码实现：
+		(1)键盘录入一个小数，用小数接收,要求小数点后的小数位最少2位
+		(2)定义方法，实现保留小数点后的两位小数(只舍不进),返回小数类型.
+		(3)如：输入5.6789 输出5.67,输入5.67389 输出5.67
+ */
+class ScannerDouble{
+	public String subnum(double d){
+		String s=d+"";
+		int index=s.indexOf('.');
+		s=s.substring(0, index+3);
+		return s;
+	}
+}
+
+
+
+
+
+
+
+/*
+ * 3.键盘录入一串字符串, 先做反转, 再转换成大写, 输出结果
+ */
+class Replase2{
+	public StringBuilder ReToUpp(String s){
+		
+		StringBuilder sb=new StringBuilder(s.toUpperCase());
+		sb.reverse();
+		
+		return sb;
+	}
+}
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-20 17:50:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.heima.store.enty.OrderItem" table="ORDERITEM">
+        <id name="itemid" type="java.lang.String">
+            <column name="ITEMID" />
+            <generator class="uuid" />
+        </id>
+        <property name="quantity" type="java.lang.Double">
+            <column name="QUANTITY" />
+        </property>
+        <property name="total" type="java.lang.Double">
+            <column name="TOTAL" />
+        </property>
+        <!-- 
+			many-to-one标签
+				* name		:一的一方的对象的属性名称。
+				* class		:一的一方的类的全路径。
+				* column	:在多的一方的表的外键的名称。
+		 -->
+        <many-to-one name="product" class="com.heima.store.enty.Product" fetch="join">
+            <column name="PID" />
+        </many-to-one>
+        <many-to-one name="orders" class="com.heima.store.enty.Orders" fetch="join">
+            <column name="OID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

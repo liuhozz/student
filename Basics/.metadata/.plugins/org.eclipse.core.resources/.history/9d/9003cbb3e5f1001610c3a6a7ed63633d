@@ -1,0 +1,5 @@
+package com.heima.LX;
+
+public class User extends Thread implements Runnable{
+	private String name;
+}

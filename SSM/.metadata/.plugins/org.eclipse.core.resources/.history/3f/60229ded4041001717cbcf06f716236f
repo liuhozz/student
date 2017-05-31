@@ -1,0 +1,16 @@
+package com.heima.ssm.service.impl;
+
+import java.util.List;
+
+import com.heima.ssm.pojo.SCust;
+import com.heima.ssm.service.CustService;
+
+public class CustServiceImpl implements CustService {
+
+	public List<SCust> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

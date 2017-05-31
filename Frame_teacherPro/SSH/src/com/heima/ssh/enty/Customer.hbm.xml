@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<!--cid
+		cust_name
+		cust_type
+		cust_phone
+		cust_address
+		cust_link_user
+	-->
+	<class name="com.heima.ssh.enty.Customer" table="s_cust">
+		<id name="cid" column="cid">
+			<generator class="native"></generator>	
+		</id>
+		
+		<property name="cust_name" column="cust_name"/>
+		<property name="cust_type" column="cust_type"/>
+		<property name="cust_phone" column="cust_phone"/>
+		<property name="cust_address" column="cust_address"/>
+		
+		
+		<many-to-one name="user" class="com.heima.ssh.enty.User"  column="cust_link_user"/>
+	
+	</class>
+
+
+</hibernate-mapping>    
+    
+    

@@ -1,0 +1,7 @@
+package com.heima.enty;
+
+import java.io.Serializable;
+
+public class Customer implements Serializable {
+
+}

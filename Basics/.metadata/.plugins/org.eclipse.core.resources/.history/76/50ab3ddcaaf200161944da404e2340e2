@@ -1,0 +1,32 @@
+package com.heima.JDBCTest;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+import org.junit.Test;
+
+import com.heima.Dao.UserDao;
+import com.heima.DaoImp.UserDaoImp;
+import com.heima.enty.User;
+
+public class TestJDBC {
+	static Connection conn=null;
+	static Statement st=null;
+	static ResultSet rs=null;
+	
+	@Test
+	public void Testinsert(){
+		UserDao dao=new UserDaoImp();
+		System.out.println(dao.Insert("123", "123", 12058, "zhaoliu"));
+	}
+	
+	@Test
+	public void TestDelect(){
+		UserDao dao=new UserDaoImp();
+		System.out.println(Arrays.toString(dao.Delect(2).toArray()) );
+	}
+}

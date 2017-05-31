@@ -1,0 +1,27 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+
+public class Test5 {
+
+	/**
+	 * 编写一个泛形方法，接收一个任意引用类型数组，并反转数组中的所有元素
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String [] arr={"aa","bb","cc","dd","ee","ff","gg"};
+		
+		reverse(arr);
+		System.out.println(arr);
+	}
+	public static <T> void reverse(T [] arr){
+		
+		for (int i = 0; i < arr.length/2; i++) {
+			 									
+			//arr.set(i, arr.set(arr.length-1-i, arr.get(i)));				//为什么set会返回被替换掉的元素
+			
+		}
+	}
+	
+	
+}

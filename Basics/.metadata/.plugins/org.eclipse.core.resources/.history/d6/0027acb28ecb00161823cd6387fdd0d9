@@ -1,0 +1,21 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+
+public class Test6 {
+
+	/**
+	 * 编写一个方法addAll(list1,list2),接收两个集合,把第二个集合中的所有元素添加到第一个集合中,不能使用集合中的addAll方法.
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> list=new ArrayList<>();
+		list.add("dd");
+		list.add("ss");
+		list.add("aa");
+		list.add("qq");
+		list.add("aa");
+		list.add("gg");
+	}
+
+}

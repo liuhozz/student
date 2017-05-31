@@ -1,0 +1,19 @@
+package com.heima.store.service.serviceimp;
+
+import com.heima.store.service.ChackCodeService;
+
+public class ChackCodeServiceImpl implements ChackCodeService {
+
+	@Override
+	public void CreateChackCode() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int getNum() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

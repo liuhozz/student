@@ -1,0 +1,140 @@
+1.IO流:
+	1.IO流的分类
+		1.按流向划分:
+			输入流和输出流
+		
+		2.按操作的数据类型划分:
+			字节流和字符流
+
+	2.流的顶层父类:
+		字节流:
+			InputStream: 抽象类 字节输入流的顶层父类
+			OutputStream:抽象类 字节输出流的顶层父类
+
+		字符流:
+			Reader: 抽象类 字符输入流的顶层父类
+			Writer: 抽象类 字符输出流的顶层父类
+
+	3.字节流的使用:
+
+		字节输入流:
+
+		FileInputStream fis = new FileInputStream("读入的文件路径");
+
+		int b = fis.read(); // 读取一个字节
+
+		fis.close();		//关闭流
+
+
+		字节输出流:	
+
+		FileOutputStream fos = new FileOutputStream("写出的文件路径");
+
+		fos.write(97);			// 写出一个字节
+
+		fos.close();			//关闭流
+
+	4.如何追加写入文件:
+		可以在创建输出流对象时,在构造方法中加入第二个参数, 加入true即可
+
+	
+	5.文件拷贝的方式:
+		1.一次拷贝一个字节: 效率低
+			FileInputStream fis = new FileInputStream("源文件");
+			FileOutputStream fos = new FileOutputStream("目标文件");
+
+			int b;	//定义一个变量
+
+			while((b=fis.read())!=-1){
+				fos.write(b);
+			}
+
+			fis.close();
+			fos.close();//关闭流,释放资源
+
+		
+		2.一次性读入所有数据到内存, 再一次性写出: 弊端: 内存容易溢出
+			FileInputStream fis = new FileInputStream("源文件");
+			FileOutputStream fos = new FileOutputStream("目标文件");
+
+			int len = fis.available();
+
+			byte[] arr = new byte[len];
+
+			fis.read(arr);	// 把源文件的数据读入到数组中
+
+			fos.write(arr); //把数组中的内容写到输出流
+
+			fis.close();
+			fos.close();//关闭流,释放资源
+
+
+		3.定义小数组(标准格式)
+			FileInputStream fis = new FileInputStream("源文件");
+			FileOutputStream fos = new FileOutputStream("目标文件");
+
+			//定义一个小数组,大小一般为1024的整数倍
+			byte[] arr = new byte[1024];
+
+			//定义一个变量,记录数组中有效的字节个数
+			int len;
+
+			//不停地读写
+			while((len=fis.read(arr))!=-1){
+				fos.write(arr,0,len);
+			}
+			
+			fis.close();
+			fos.close();//关闭流,释放资源			
+
+
+	6.带缓冲区的字节流:
+		BufferedInputStream(InputStream)
+		BufferedOutputStream(OutputStream)
+			自带的缓冲区大小是8192个字节
+		
+		一次只能读写一个字节的时候,使用带缓冲区的流效率更高!
+
+	7.flush方法与close方法的区别:	
+		flush方法是把缓冲区中的数据刷新到文件中, 可以多次调用
+		close方法作用是关闭流, 在关闭流前会把缓冲区中的内容刷新到文件中,只能调用一次!
+
+	8.字节流读写中文:
+		字节流读取中文可能会出现乱码,读到半个中文!
+		字节流是可以完美地写出中文的,没有任何问题!
+
+	9.JDK1.6以前的流的标准异常代码
+		InputStream is = null;
+		OutputStream os = null;
+
+		try {
+			is = new FileInputStream("a.txt");
+			os = new FileOutputStream("b.txt");
+
+			byte[] arr = new byte[1024 * 8];
+
+			int len;
+
+			while ((len = is.read(arr)) != -1) {
+				os.write(arr, 0, len);
+			}
+
+		} finally {
+
+			try {
+				if (is != null) {
+					is.close();
+				}
+			} finally {
+				if (os != null)
+					os.close();
+			}
+		}
+
+
+	10.JDK1.7之后的标准异常代码(了解)
+
+	11.注意事项:
+		在键盘录入中的反斜杠没有转义的效果!
+
+	

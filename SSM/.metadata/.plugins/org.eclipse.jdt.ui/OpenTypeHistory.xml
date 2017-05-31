@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=MyBatis/src&lt;com.heima.mybatis.Dao{IUserDao.java[IUserDao" modifiers="513" timestamp="1495007755066"/>
+<typeInfo handle="=MyBatis2/lib\/mybatis-spring-1.2.2.jar&lt;org.mybatis.spring.support(SqlSessionDaoSupport.class[SqlSessionDaoSupport" modifiers="1057" timestamp="1495089700618"/>
+<typeInfo handle="=SSM_Test/E:\/Eclipse\/SSM\/SSM_Test\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet.view(InternalResourceViewResolver.class[InternalResourceViewResolver" modifiers="33" timestamp="1495178443124"/>
+<typeInfo handle="=SSM_Test/src&lt;com.heima.springmvc.service{ItemService.java[ItemService" modifiers="513" timestamp="1495452008364"/>
+<typeInfo handle="=SSM_Test/E:\/Eclipse\/SSM\/SSM_Test\/WebContent\/WEB-INF\/lib\/slf4j-api-1.7.5.jar&lt;org.slf4j(LoggerFactory.class[LoggerFactory" modifiers="49" timestamp="1495178442464"/>
+<typeInfo handle="=SSM_Test/E:\/Eclipse\/SSM\/SSM_Test\/WebContent\/WEB-INF\/lib\/spring-web-4.2.4.RELEASE.jar&lt;org.springframework.web.context(ContextLoaderListener.class[ContextLoaderListener" modifiers="33" timestamp="1495178443101"/>
+<typeInfo handle="=SSM_Test/E:\/Eclipse\/SSM\/SSM_Test\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class[DispatcherServlet" modifiers="33" timestamp="1495178443124"/>
+<typeInfo handle="=SSM_Test/D:\/Java\/JDK\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1482114993155"/>
+</typeInfoHistroy>

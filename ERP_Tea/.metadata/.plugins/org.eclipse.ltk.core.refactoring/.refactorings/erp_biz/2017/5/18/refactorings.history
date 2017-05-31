@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;empuuid&apos; in &apos;cn.itcast.erp.biz.impl.OrdersBiz.getSupplierName(...)&apos; to &apos;supplieruuid&apos;&#x0D;&#x0A;- Original project: &apos;erp_biz&apos;&#x0D;&#x0A;- Original element: &apos;cn.itcast.erp.biz.impl.OrdersBiz.getSupplierName(Long, Map&lt;Long, String&gt;).empuuid&apos;&#x0D;&#x0A;- Renamed element: &apos;empuuid&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;empuuid&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;cn.itcast.erp.biz.impl{OrdersBiz.java[OrdersBiz~getSupplierName~QLong;~QMap\&lt;QLong;QString;&gt;;@empuuid!2202!2213!2207!2213!QLong;!0!true" name="supplieruuid" references="true" stamp="1493813117888" version="1.0"/>
+</session>

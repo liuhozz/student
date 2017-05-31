@@ -1,0 +1,23 @@
+package com.heima.ssm.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.heima.ssm.mapper.SUserMapper;
+import com.heima.ssm.pojo.SUser;
+
+@Controller
+public class CustomerController {
+
+	@Autowired
+	private SUserMapper userMapper;
+	
+	@RequestMapping("login")
+	public String login(SUser user){
+		
+		
+		
+		return "";
+	}
+}

@@ -1,0 +1,5 @@
+package com.heima.ssm.service.impl;
+
+public class Login implements com.heima.ssm.service.Login {
+
+}

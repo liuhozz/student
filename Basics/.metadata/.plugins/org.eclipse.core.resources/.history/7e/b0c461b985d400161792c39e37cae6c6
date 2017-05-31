@@ -1,0 +1,18 @@
+package com.heima.Test;
+
+import java.util.Scanner;
+
+public class Test03 {
+
+	/**
+	 * 拷贝文件夹
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入一个文件夹路径:");
+		String line = sc.nextLine();
+		Test01.getDir(line)
+	}
+
+}

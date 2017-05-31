@@ -1,0 +1,2 @@
+eader("aaa.txt");			//创建字符输入流,关联aaa.txt
+		FileWri

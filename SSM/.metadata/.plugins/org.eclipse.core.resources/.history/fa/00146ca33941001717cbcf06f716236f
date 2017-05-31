@@ -1,0 +1,10 @@
+package com.heima.ssm.service;
+
+import com.heima.ssm.pojo.SUser;
+
+public interface Login {
+
+	SUser login(SUser user);
+	
+	
+}

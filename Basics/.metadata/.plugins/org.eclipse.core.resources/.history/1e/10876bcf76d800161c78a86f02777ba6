@@ -1,0 +1,45 @@
+package com.itheima.tests;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.TreeMap;
+
+public class Test04 {
+	/**
+	 * 现有一串字符串”上海传智播客,上海黑马,武汉传智播客,深圳黑马,北京传智播客,广州黑马”,
+	 要求使用程序统计出”传智播客”和”黑马”在该字符串中出现的次数,然后按照指定格式输出到当前项目下的num.txt中
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		String str ="上海传智播客,上海黑马,武汉传智播客,深圳黑马,北京传智播客,广州黑马";
+		String min1 = "传智播客";
+		String min2 = "黑马";
+		int count1=0;
+		int count2=0;
+		int index1 = 0;
+		int index2 = 0;
+		while((index1 = str.indexOf(min1))!=-1){
+			count1++;
+			str=str.substring(index1+min1.length());
+		}
+		String str1 ="上海传智播客,上海黑马,武汉传智播客,深圳黑马,北京传智播客,广州黑马";
+		while((index2 = str.indexOf(min2))!=-1){
+			count2++;
+			str=str.substring(index2+min2.length());
+		}
+		String s1=min1+"="+count1;
+		String s2=min2+"="+count2;
+		
+		BufferedWriter bw = new BufferedWriter(new FileWriter("num.txt"));
+		
+		bw.write(s1);
+		bw.newLine();
+		bw.write(s2);
+		bw.newLine();
+		
+		bw.close();
+	}
+
+}

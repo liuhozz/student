@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hos.beans.Specialist_Expert" table="Specialist_Expert">
+		<!--主键 -->
+		<id name="sE_id">
+			<generator class="native" />
+		</id>
+		<!--专家名字 -->
+		<property name="sE_name" />
+		<!-- 专家性别 -->
+		<property name="sE_sex" />
+		<!-- 专家年龄  -->
+		<property name="sE_age" />
+		<!-- 专家电话 -->
+		<property name="sE_tel" />
+
+		<!-- 专家介绍 -->
+		<property name="sE_intro" />
+		<!-- 视频或图片id -->
+		<property name="sE_pos" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+高效的用指定的编码表写
+				new BufferedWriter(new OutputStre

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public static void dome1(HashMap&lt;String,Integer&gt; hm)&apos; from &apos;com.heima.classroom.Dome1.main()&apos; to &apos;com.heima.classroom.Dome1&apos;&#x0D;&#x0A;- Original project: &apos;HashMap_class&apos;&#x0D;&#x0A;- Method name: &apos;dome1&apos;&#x0D;&#x0A;- Destination type: &apos;com.heima.classroom.Dome1&apos;&#x0D;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;dome1&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;com.heima.classroom{Dome1.java" name="dome1" replace="false" selection="333 92" stamp="1482979357903" version="1.0" visibility="1"/>
+</session>

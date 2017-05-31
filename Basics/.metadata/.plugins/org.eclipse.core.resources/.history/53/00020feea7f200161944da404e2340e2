@@ -1,0 +1,24 @@
+package com.heima.JDBCTest;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.junit.Test;
+
+import com.heima.Dao.UserDao;
+import com.heima.DaoImp.UserDaoImp;
+
+public class TestJDBC {
+	static Connection conn=null;
+	static Statement st=null;
+	static ResultSet rs=null;
+	private String insert;
+	
+	@Test
+	public void Testinsert(){
+		UserDao dao=new UserDaoImp();
+		insert = dao.Insert("123", "123", 15978961235, "zhaoliu");
+	}
+	
+}

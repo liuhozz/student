@@ -1,0 +1,8 @@
+package com.heima.enty;
+
+/*
+ *   再定义一个汽车类(Car),该类中有以下属性: 颜色(color),轮子个数(num), 引擎(engine)
+ */
+public class Car {
+
+}

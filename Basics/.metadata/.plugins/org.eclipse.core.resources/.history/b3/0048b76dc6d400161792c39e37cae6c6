@@ -1,0 +1,78 @@
+1.IO流中的其他流
+	1.序列流:(了解)
+		作用: 可以把多个字节输入流合并成一个!
+
+		通过构造方法,把两个输入流合并成一个!
+
+		通过把多个输入流存储到Vector集合中,转换成枚举,再传入序列流的构造方法中,可以实现合并多个输入流!
+
+	2.内存输出流:
+		作用: 可以把文本文件全部读取到内存,再一次性转换成字符串,可以避免出现乱码!
+
+		弊端: 内存容易溢出!
+
+		不需要关闭流!
+
+
+	3.随机访问流:(了解)
+		RandomAccessFile: 可以指定读写的位置
+			作用: 用于多线程下载, 或者断点续传!
+			
+			自带续写功能!
+
+			seek(index): 设置读写的位置
+
+	
+	4.对象操作流:(了解)
+		1.对象输出流: ObjectOutputStream
+			writeObject(Object)
+
+			写出的对象必须要实现Serializable接口
+
+		2.对象输入流: ObjectInputStream
+			readObject(): 把对象从文件中读取回来, 调用一次就读取一个对象,有几个对象就调用几次!
+
+		3.关于ID:
+			ID的作用是标识当前字节码的版本!
+
+	5.数据输入输出流(了解)
+
+	6.打印流:(重点了解)
+		PrintStream:
+			打印字节流
+		PrintWriter:
+			打印字符流
+
+		可以指定是否自动刷出,通过构造方法
+
+		打印流只操作数据目的,不操作数据源!
+
+	7.标准输入输出流:(了解)
+		标准输入流: System.in 默认指向的是键盘
+		标准输出流: System.out 默认指向的是控制台
+
+		System.setIn(输入流): 设置标准输入流的指向
+		System.setOut(输出流): 设置标准输出流的指向
+
+		
+	8.键盘录入的两种方式:(了解)
+		1.Scanner类
+
+		2.使用BufferedReader包装InputStreamReader, 再包装System.in
+
+
+2.Properties类(了解)
+	是一个Map集合的子类,它的父类是Hashtable
+
+	这个集合没有泛型, 存储的都是String
+	
+	特有的方法:
+		setProperty(key,value)
+		getProperty(key)
+		propertyNames(): 返回所有键的枚举
+
+
+	load(字节输入流): 把文件中的数据加载进集合中
+	store(字节输出流,"注释"): 把集合中的数据存储到文件中! 
+
+

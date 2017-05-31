@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=struts2_crm/E:\/Eclipse\/Frame_teacherPro\/struts2_crm\/WebContent\/WEB-INF\/lib\/struts2-core-2.3.24.jar&lt;org.apache.struts2.dispatcher.ng.filter(StrutsPrepareAndExecuteFilter.class[StrutsPrepareAndExecuteFilter" modifiers="33" timestamp="1490250505012"/>
+<typeInfo handle="=struts2_crm/src&lt;com.itheima.dao{UserDao.java[UserDao" modifiers="513" timestamp="1490512010403"/>
+<typeInfo handle="=struts2_crm/src&lt;com.itheima.service{UserService.java[UserService" modifiers="513" timestamp="1490512470123"/>
+<typeInfo handle="=struts2_crm/E:\/Eclipse\/Frame_teacherPro\/struts2_crm\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1490250601155"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.2.4.RELEASE.jar&lt;org.springframework.jdbc.core(JdbcTemplate.class[JdbcTemplate" modifiers="33" timestamp="1490855687837"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.2.4.RELEASE.jar&lt;org.springframework.jdbc.datasource(DriverManagerDataSource.class[DriverManagerDataSource" modifiers="33" timestamp="1490855687837"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/com.springsource.org.apache.commons.dbcp-1.2.2.osgi.jar&lt;org.apache.commons.dbcp(BasicDataSource.class[BasicDataSource" modifiers="33" timestamp="1490855589647"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/spring-jdbc-4.2.4.RELEASE.jar&lt;org.springframework.jdbc.datasource(DataSourceTransactionManager.class[DataSourceTransactionManager" modifiers="33" timestamp="1490855687837"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/spring-tx-4.2.4.RELEASE.jar&lt;org.springframework.transaction.support(TransactionTemplate.class[TransactionTemplate" modifiers="33" timestamp="1490855581983"/>
+<typeInfo handle="=spring4_day03_jdbc/E:\/Eclipse\/Frame_teacherPro\/spring4_day03_jdbc\/WebContent\/WEB-INF\/lib\/spring-tx-4.2.4.RELEASE.jar&lt;org.springframework.transaction(TransactionDefinition.class[TransactionDefinition" modifiers="1537" timestamp="1490855581983"/>
+<typeInfo handle="=crm_ssh_1/src&lt;com.heima.ssh.service{UserService.java[UserService" modifiers="513" timestamp="1491382130506"/>
+<typeInfo handle="=crm_ssh_1/E:\/Eclipse\/Frame_teacherPro\/crm_ssh_1\/WebContent\/WEB-INF\/lib\/spring-orm-4.2.4.RELEASE.jar&lt;org.springframework.orm.hibernate5(HibernateTransactionManager.class[HibernateTransactionManager" modifiers="1" timestamp="1491107462254"/>
+<typeInfo handle="=crm_ssh_1/E:\/Eclipse\/Frame_teacherPro\/crm_ssh_1\/WebContent\/WEB-INF\/lib\/spring-tx-4.2.4.RELEASE.jar&lt;org.springframework.transaction.support(TransactionTemplate.class[TransactionTemplate" modifiers="1" timestamp="1491107462262"/>
+<typeInfo handle="=SSH/E:\/Eclipse\/Frame_teacherPro\/SSH\/WebContent\/WEB-INF\/lib\/spring-orm-4.2.4.RELEASE.jar&lt;org.springframework.orm.hibernate5.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1057" timestamp="1491107462254"/>
+<typeInfo handle="=SSH/src&lt;com.heima.ssh.Dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1491744246084"/>
+<typeInfo handle="=SSH/src&lt;com.heima.ssh.Service{CustomerService.java[CustomerService" modifiers="513" timestamp="1491744237969"/>
+<typeInfo handle="=SSH/E:\/Eclipse\/Frame_teacherPro\/SSH\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ModelDriven.class[ModelDriven" modifiers="1537" timestamp="1491107462309"/>
+<typeInfo handle="=SSH/D:\/Java\/JDK\/jre\/lib\/rt.jar&lt;com.sun.media.sound(ModelDirectedPlayer.class[ModelDirectedPlayer" modifiers="1537" timestamp="1482114993155"/>
+<typeInfo handle="=SSH/E:\/Eclipse\/Frame_teacherPro\/SSH\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1491107462309"/>
+</typeInfoHistroy>

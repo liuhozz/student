@@ -1,0 +1,91 @@
+1.字符流
+	1.字符流的顶层父类:
+		Reader:
+			FileReader:
+				read(): 返回的是一个int值,但是表示的是一个字符
+
+		Writer: (有一个2KB的小缓冲区)
+			FileWriter:
+				write(String): 把一个字符串写到文件中
+				write(int): 把一个字符写到文件中
+			
+	2.字符流的拷贝:
+		1.一次读写一个字符: 效率低!
+			FileReader fr = new FileReader("a.txt");
+			FileWriter fw = new FileWriter("b.txt");
+
+			int c;
+
+			while((c = fr.read())!=-1){
+				fw.write(c);
+			}
+
+			fr.close();
+			fw.close();
+
+		2.定义小数组
+			FileReader fr = new FileReader("a.txt");
+			FileWriter fw = new FileWriter("b.txt");
+
+			char[] arr = new  char[1024];
+			int len;
+
+			while((len=fr.read(arr))!=-1){
+				fw.write(arr,0,len);
+			}
+
+			fr.close();
+			fw.close();
+
+
+	3.什么时候使用字符流:
+		1.如果只是拷贝文件,不管是什么内容,都用字节流
+
+		2.只读或者只写文本文件的时候使用字符流
+
+	4.字符流是不能拷贝非纯文本文件的!
+
+	5.带缓冲区的字符流:
+		BufferedReader:
+			readLine(): 读取一行文本内容, 以换行符作为结束标记
+
+		BufferedWriter:
+			newLine(): 写出一个换行符. 这个方法具有跨平台性, 可以根据不同的系统写出不同的换行符!
+						而 \r\n 只在windows有效!
+
+	6.LineNumberReader:(了解)
+		带行号的缓冲区字符流
+
+	
+	7.装饰设计模式:(了解)
+		1.设计模式就是套路
+
+		2.步骤:
+			1.定义一个类, 在成员位置声明一个需要被装饰的类的引用
+
+			2.通过构造方法,传入被装饰的类的对象
+
+			3.写一个与被装饰的类中相同的方法, 调用原来对象中的该方法,然后对其进行增强!
+
+		3.好处:
+			概对原有的类进行功能上的增强, 又避免了继承的弊端:耦合性过强!
+
+
+2.其他内容
+	1.转换流:
+		InputStreamReader(FileInputStream,编码表): 字节转字符的桥梁
+		OutputStreamWriter(FileOutputStream,编码表): 字符转字节的桥梁
+
+	2.作用:
+		可以指定读写的编码表
+
+3.递归
+	1.什么是递归:
+		方法自己调用自己
+
+	2.好处:
+		可以使用简单代码实现复杂的逻辑
+
+	3.弊端:
+		容易栈内存溢出
+

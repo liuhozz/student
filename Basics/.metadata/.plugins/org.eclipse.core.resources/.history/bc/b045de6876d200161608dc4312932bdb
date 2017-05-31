@@ -1,0 +1,42 @@
+###21.01_IO流(字符流FileReader)
+* 1.字符流是什么
+	* 字符流是可以直接读写字符的IO流
+	* 字符流读取字符, 就要先读取到字节数据, 然后转为字符. 如果要写出字符, 需要把字符转为字节再写出.    
+* 2.FileReader
+	* FileReader类的read()方法可以按照字符大小读取
+* 
+		FileReader fr = new FileReader("aaa.txt");				//创建输入流对象,关联aaa.txt
+		int ch;
+		while((ch = fr.read()) != -1) {							//将读到的字符赋值给ch
+			System.out.println((char)ch);						//将读到的字符强转后打印
+		}
+		
+		fr.close();												//关流 
+
+###21.02_IO流(字符流FileWriter)
+* FileWriter类的write()方法可以自动把字符转为字节写出
+
+		FileWriter fw = new FileWriter("aaa.txt");
+		fw.write("aaa");
+		fw.close();
+
+###21.03_IO流(字符流的拷贝)
+	FileReader fr = new FileReader("a.txt");
+	FileWriter fw = new FileWriter("b.txt");
+	
+	int ch;
+	while((ch = fr.read()) != -1) {
+		fw.write(ch);
+	}
+	
+	fr.close();
+	fw.close();
+###21.04_IO流(什么情况下使用字符流)
+* 字符流也可以拷贝文本文件, 但不推荐使用. 因为读取时会把字节转为字符, 写出时还要把字符转回字节.
+* 程序需要读取一段文本, 或者需要写出一段文本的时候可以使用字符流
+* 读取的时候是按照字符的大小读取的,不会出现半个中文
+* 写出的时候可以直接将字符串写出,不用转换为字节数组
+
+###21.05_IO流(字符流是否可以拷贝非纯文本的文件)
+* 不可以拷贝非纯文本的文件
+* 因为在读的时候会将字节转换为字符,在转换过程中,可能找不到对应

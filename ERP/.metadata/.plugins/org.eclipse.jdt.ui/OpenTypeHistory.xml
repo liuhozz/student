@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=ERP_biz/src\/main\/java&lt;cn.itcast.erp.biz{IDepBiz.java[IDepBiz" modifiers="513" timestamp="1492767087823"/>
+<typeInfo handle="=ERP_biz/D:\/Maven\/repository\/org\/springframework\/spring-jdbc\/4.2.4.RELEASE\/spring-jdbc-4.2.4.RELEASE.jar&lt;org.springframework.jdbc.support.incrementer(OracleSequenceMaxValueIncrementer.class[OracleSequenceMaxValueIncrementer" modifiers="33" timestamp="1461734703745"/>
+<typeInfo handle="=ERP_biz/D:\/Maven\/repository\/org\/hibernate\/javax\/persistence\/hibernate-jpa-2.1-api\/1.0.0.Final\/hibernate-jpa-2.1-api-1.0.0.Final.jar&lt;javax.persistence(SequenceGenerator.class[SequenceGenerator" modifiers="9729" timestamp="1445940605000"/>
+<typeInfo handle="=ERP_biz/D:\/Maven\/repository\/org\/hibernate\/hibernate-core\/5.0.7.Final\/hibernate-core-5.0.7.Final.jar&lt;org.hibernate.id(SequenceGenerator.class[SequenceGenerator" modifiers="1048609" timestamp="1461740927047"/>
+<typeInfo handle="=ERP_biz/D:\/Maven\/repository\/org\/hibernate\/hibernate-core\/5.0.7.Final\/hibernate-core-5.0.7.Final.jar&lt;org.hibernate.id.enhanced(SequenceStructure.class[SequenceStructure" modifiers="33" timestamp="1461740927047"/>
+<typeInfo handle="=ERP_biz/D:\/Maven\/repository\/org\/hibernate\/hibernate-core\/5.0.7.Final\/hibernate-core-5.0.7.Final.jar&lt;org.hibernate.id.enhanced(SequenceStyleGenerator.class[SequenceStyleGenerator" modifiers="33" timestamp="1461740927047"/>
+<typeInfo handle="=ERP_dao/src\/main\/java&lt;cn.itcast.erp.dao{IBaseDao.java[IBaseDao" modifiers="513" timestamp="1492852123216"/>
+<typeInfo handle="=ERP_dao/D:\/Maven\/repository\/org\/springframework\/spring-orm\/4.2.4.RELEASE\/spring-orm-4.2.4.RELEASE.jar&lt;org.springframework.orm.hibernate5.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1057" timestamp="1461734584997"/>
+</typeInfoHistroy>

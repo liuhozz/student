@@ -1,0 +1,2 @@
+dWriter写出字符到GBK码表和UTF-8码表的文件中
+* 3.会使用BufferedRead

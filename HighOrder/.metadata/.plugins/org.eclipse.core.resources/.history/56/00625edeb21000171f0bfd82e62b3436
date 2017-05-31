@@ -1,0 +1,14 @@
+package com.heima.store.servlet;
+
+import com.heima.store.base.BaseServlet;
+
+/**
+ * Servlet implementation class CheckCodeServlet
+ */
+public class CheckCodeServlet extends BaseServlet {
+	private static final long serialVersionUID = 1L;
+	
+	
+   
+
+}

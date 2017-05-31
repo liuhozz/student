@@ -1,0 +1,47 @@
+1.IO流中的其他流
+
+	1.序列流:(了解)
+	SequenceInputStream
+	SequenceOutputStream
+		作用: 可以把多个字节输入流合并成一个!
+
+		通过构造方法,把两个输入流合并成一个!
+
+		通过把多个输入流存储到Vector集合中,转换成枚举,再传入序列流的构造方法中,可以实现合并多个输入流!
+
+	2.内存输出流:
+	ByteArrayInputStream
+	ByteArrayOutputStream
+		作用: 可以把文本文件全部读取到内存,再一次性转换成字符串,可以避免出现乱码!
+
+		弊端: 内存容易溢出!
+
+		不需要关闭流!
+
+
+	3.随机访问流:(了解)
+	RandomAccessFile
+		RandomAccessFile: 可以指定读写的位置
+			作用: 用于多线程下载, 或者断点续传!
+			
+			自带续写功能!
+
+			seek(index): 设置读写的位置
+
+	
+	4.对象操作流:(了解)
+	ObjectInputStream
+	ObjectOutputStream
+		1.对象输出流: ObjectOutputStream
+			writeObject(Object)
+
+			写出的对象必须要实现Serializable接口
+
+		2.对象输入流: ObjectInputStream
+			readObject(): 把对象从文件中读取回来, 调用一次就读取一个对象,有几个对象就调用几次!
+
+		3.关于ID:
+			ID的作用是标识当前字节码的版本!
+
+	5.数据输入输出流(了解)
+	DataInputStream

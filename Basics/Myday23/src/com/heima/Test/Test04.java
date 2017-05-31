@@ -1,0 +1,49 @@
+package com.heima.Test;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Test04 {
+
+	/**
+	 * 需求:4,从键盘接收一个文件夹路径,把文件夹中的所有文件以及文件夹的名字按层级打印, 例如:
+	 * 把文件夹中的所有文件以及文件夹的名字按层级打印
+	 * 分析:
+	 * 1,获取所有文件和文件夹,返回的File数组
+	 * 2,遍历数组
+	 * 3,无论是文件还是文件夹,都需要直接打印
+	 * 4,如果是文件夹,递归调用
+	 * 	day07
+	 * 		day08
+	 * 			xxx.jpg
+	 * 			yyy.txt
+	 * 		Demo1_Consturctor.class
+	 * 		Demo1_Consturctor.java
+	 * 	Demo1_Student.class
+	 * 	Demo1_Student.java
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("请输入一个文件夹路径:");
+		String line = sc.nextLine();
+		File file = Test01.getDir(line);
+		BL(file,0);
+	}
+
+	public static void BL(File file,int l) {
+		// TODO Auto-generated method stub
+		File[] x=file.listFiles();
+		for (File file2 : x) {
+			for(int i=0;i<=l;i++){
+				System.out.print("\t");
+			}
+			if(file2.isFile())
+				System.out.println(file2.getName());
+			else{
+				BL(file2,l+1);
+			}
+		}
+	}
+
+}

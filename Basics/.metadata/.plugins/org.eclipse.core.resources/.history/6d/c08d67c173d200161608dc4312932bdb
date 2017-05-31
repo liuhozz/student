@@ -1,0 +1,13 @@
+package com.heima.Test;
+
+public class Test05 {
+
+	/**
+	 * 用今天所学的知识, 写一个程序, 把一个大文件切割成多个小文件(提示:小文件的大小就是小数组的大小)
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

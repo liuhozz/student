@@ -1,0 +1,1 @@
+(new FileReader("aaa.txt"));	//创建字符输入流对象,关联aaa.txt

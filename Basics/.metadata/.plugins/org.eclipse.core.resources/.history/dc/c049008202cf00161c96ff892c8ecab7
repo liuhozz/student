@@ -1,0 +1,22 @@
+package com.heima.tests;
+
+public class Test {
+
+	/**
+	 * 28个人去买可乐    3个瓶盖换一瓶可乐   最少买几瓶够28人喝
+	 */
+	public static void main(String[] args) {
+		int kl=0,ren=0,count=0;
+		for(int i=0;ren<=28;i++){
+		
+			ren=i;
+			if(kl%3==0)
+				i++;
+			//
+			count++;
+		}
+		System.out.println(ren);
+		System.out.println(count);
+	}
+
+}

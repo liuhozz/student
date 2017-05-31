@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="ui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="ui/themes/icon.css">
+<script type="text/javascript" src="ui/jquery.min.js"></script>
+<script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
+
+<script type="text/javascript">
+var method="";
+$(function(){
+	
+	$('#dg').datagrid({    
+	    url:'depAction_findByCrata.action',
+	    columns:[[    
+	        {field:'uuid',title:'编号',width:100},    
+	        {field:'name',title:'部门名称',width:100},    
+	        {field:'tele',title:'电话',width:100,align:'right'},
+	        {field:'-',title:'操作',
+				formatter: function(value,row,index){
+					var obj = '<a href="javascript:void(0)" onclick="edit('+row.uuid+')">修改</a> | ';
+					obj+='<a href="javascript:void(0)" onclick="del('+row.uuid+')">删除</a>';
+					return obj;
+				}
+			} 
+	    ]] ,
+	    toolbar: [{
+	    	text:'添加',
+	    	iconCls:'icon-add',
+			handler: function(){
+				method = "save";
+				$('#formDepsave').form('clear');
+				$('#saveDep').dialog('open');
+				
+			}
+		}],
+		pagination: true,
+		singleSelect: true
+	});  
+	
+	$('#saveDep').dialog({ 
+		
+	    title: '部门编辑',
+	    width: 300,
+	    height: 200,
+	    closed: true,//窗口是是否为关闭状态, true：表示关闭
+	    modal: true//模式窗口
+	});   
+	
+	$('#btnDepsave').bind('click',function(){
+		var formData = $('#formDepsave').serializeJSON();
+		console.log(method+"btnclick");
+		$.ajax({
+			
+			url: 'depAction_' + method,
+			data: formData,
+			dataType: 'json',
+			type: 'post',
+			success:function(rtn){
+					$.messager.alert("提示",rtn.message,'info',function(){
+						//成功的话，我们要关闭窗口
+						$('#saveDep').dialog('close');
+						//刷新表格数据
+						$('#dg').datagrid('reload');
+					});
+			}
+		});
+	});
+	
+	
+	
+	$("#btnDep").click(function(){
+		
+		var formData = $("#formDep").serializeJSON();
+		
+		$('#dg').datagrid('reload',formData);
+		
+	}); 
+});
+
+function edit(uuid){
+	console.log(method);
+	method="update";
+	console.log(method);
+	//开启窗口
+	$('#saveDep').form('clear');
+	$('#saveDep').dialog('open');
+	$('#saveDep').form('load','depAction_getDepById?dep.uuid='+uuid);
+	
+}
+
+function del(uuid){
+	
+	$.messager.confirm("确认","确认要删除吗？",function(yes){
+		if(yes){
+			$.ajax({
+				url: 'depAction_delete?dep.uuid='+uuid,
+				//data: {'dep.uuid':uuid},
+				dataType: 'json',
+				type: 'post',
+				success:function(rtn){
+						$.messager.alert("提示",rtn.message,'info',function(){
+							
+							//刷新表格数据
+							$('#dg').datagrid('reload');
+						});
+				}
+			});
+		}
+	});
+}
+
+
+</script>
+
+</head>
+<body>
+
+<form id="formDep">
+部门名称:<input type="text" name="dep.name"/><br/>
+部门电话:<input type="text" name="dep.tele"/><br/>
+<button type="button" id="btnDep">提交</button>
+</form>
+
+<table id="dg"></table>
+
+<div id="saveDep">
+
+<form id="formDepsave">
+<input type="hidden" name="dep.uuid" />
+部门名称:<input type="text" name="dep.name"/><br/>
+部门电话:<input type="text" name="dep.tele"/><br/>
+<button type="button" id="btnDepsave">保存</button>
+</form>
+
+</div>
+
+</body>
+</html>

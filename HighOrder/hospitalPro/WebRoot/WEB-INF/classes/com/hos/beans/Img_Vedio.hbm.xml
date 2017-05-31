@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="com.hos.beans.Img_Vedio" table="Img_Vedio">
+  <!--主键 -->
+  <id name="iv_id">
+   <generator class="native"/>
+  </id>
+  <!--用户名 -->
+  <property  name="iV_type"/>
+  <!-- 视频作者 -->
+  <property  name="Vd_author"/>
+    <!-- 视频或图片名字 -->
+  <property  name="iV_name"/>
+    <!-- 视频或图片路径 -->
+  <property  name="iV_path"/>
+    <!-- 视频或图片日期 -->
+  <property  name="iV_date"/>
+   
+ </class>
+</hibernate-mapping>

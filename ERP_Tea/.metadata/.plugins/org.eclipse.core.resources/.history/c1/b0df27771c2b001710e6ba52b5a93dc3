@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="ui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="ui/themes/icon.css">
+<script type="text/javascript" src="ui/jquery.min.js"></script>
+<script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
+	
+<script type="text/javascript">
+	var editrowIndex=-1;
+	$(function(){
+		$("#grid").datagrid({
+			singleSelect:true,//只允许选择一行
+			columns:[[    
+			          {field:'goodsuuid',title:'商品编号',width:100},    
+			          {field:'goodsname',title:'商品名称',width:100},    
+			          {field:'price',title:'价格',width:100,editor:'numberbox'},    
+			          {field:'num',title:'数量',width:100,editor:'numberbox'},    
+			          {field:'money',title:'金额',width:100,editor:'numberbox'},    
+			      ]],
+			      toolbar:[{//顶部工具栏
+			  		iconCls: 'icon-add',
+			  		text:'添加',
+					handler: function(){
+						if(editrowIndex > -1){//关闭其他行的可编辑状态
+							$("#grid").datagrid('endEdit',editrowIndex);
+						}
+						$("#grid").datagrid('appendRow',{num:0,money:0});//添加一行  并且给数量和金额赋默认值
+						editrowIndex = $("#grid").datagrid('getRows').length - 1;
+						$("#grid").datagrid('beginEdit',editrowIndex);
+					}
+				},'-',{
+					iconCls: 'icon-save',
+					text:'保存',
+					handler: function(){
+						
+					}
+				}]
+			onClickRow:function(rowIndex,rowData){
+				$("#grid").datagrid('endEdit',editrowIndex);
+				$("#grid").datagrid('beginEdit',rowIndex);
+			}
+		});
+	});
+	
+</script>
+	
+</head>
+
+<body>
+<table id="grid"></table>
+
+
+</body>
+</html>

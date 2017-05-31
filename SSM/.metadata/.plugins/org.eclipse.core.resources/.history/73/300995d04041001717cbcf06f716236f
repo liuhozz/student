@@ -1,0 +1,6 @@
+package com.heima.ssm.service;
+
+public interface CustService {
+
+	List<SCust> getList();
+}

@@ -1,0 +1,53 @@
+package comg.heima.HashSetTest01;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class Test01 {
+
+	/**
+	 *  将集合中的重复元素去掉
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Dome1();
+		ArrayList<String> list = new ArrayList<>();
+		list.add("a");
+		list.add("a");
+		list.add("a");
+		list.add("b");
+		list.add("b");
+		list.add("b");
+		list.add("b");
+		list.add("c");
+		list.add("c");
+		list.add("c");
+		list.add("c");
+		
+		LinkedHashSet<String> hs=new LinkedHashSet<>();
+		hs.addAll(list);
+		list.clear();
+		list.addAll(hs);
+		for (String str : list) {
+			System.out.print(str);
+		}
+		
+	}
+
+
+	/**
+	 *  使用Scanner从键盘读取一行输入,去掉其中重复字符, 打印出不同的那些字符
+	 * 		aaaabbbcccddd
+	 */
+	public static void Dome1() {
+		Scanner sc=new Scanner(System.in);
+		String input=sc.next();
+		LinkedHashSet<Character> hs=new LinkedHashSet<>();
+		for (int i=0;i<input.length();i++){
+			hs.add(input.charAt(i));
+		}
+		System.out.println(hs);
+	}
+
+}

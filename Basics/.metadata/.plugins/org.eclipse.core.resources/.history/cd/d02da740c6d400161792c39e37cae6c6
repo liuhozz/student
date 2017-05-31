@@ -1,0 +1,45 @@
+
+	DataOutputStream
+
+
+	6.打印流:(重点了解)
+		PrintStream:
+			打印字节流
+		PrintWriter:
+			打印字符流
+
+		可以指定是否自动刷出,通过构造方法
+
+		打印流只操作数据目的,不操作数据源!
+
+	7.标准输入输出流:(了解)
+		标准输入流: System.in 默认指向的是键盘
+		标准输出流: System.out 默认指向的是控制台
+
+		System.setIn(输入流): 设置标准输入流的指向
+		System.setOut(输出流): 设置标准输出流的指向
+
+		
+	8.键盘录入的两种方式:(了解)
+		1.Scanner类
+
+		2.使用BufferedReader包装InputStreamReader, 再包装System.in
+
+
+2.Properties类(了解)
+	是一个Map集合的子类,它的父类是Hashtable
+
+	这个集合没有泛型, 存储的都是String
+	
+	特有的方法:
+		setProperty(key,value)
+		getProperty(key)
+		propertyNames(): 返回所有键的枚举
+
+
+	load(字节输入流): 把文件中的数据加载进集合中
+	store(字节输出流,"注释"): 把集合中的数据存储到文件中! 
+
+
+
+

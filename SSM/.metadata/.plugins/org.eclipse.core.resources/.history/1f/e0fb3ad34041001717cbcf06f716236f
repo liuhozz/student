@@ -1,0 +1,7 @@
+package com.heima.ssm.service.impl;
+
+import com.heima.ssm.service.CustService;
+
+public class CustServiceImpl implements CustService {
+
+}

@@ -1,0 +1,16 @@
+package com.heima.Dao;
+
+import java.util.List;
+
+import com.heima.enty.User;
+
+public interface UserDao {
+	
+	List<?> findAll();
+	
+	User Update();
+	
+	User Delect();
+	
+	String Insert();
+}

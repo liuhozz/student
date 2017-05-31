@@ -1,0 +1,13 @@
+package com.heima.Test;
+
+public class Test02 {
+
+	/**
+	 * 九九乘法表用字符流写出到当前的项目下的 99.txt 文件中
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

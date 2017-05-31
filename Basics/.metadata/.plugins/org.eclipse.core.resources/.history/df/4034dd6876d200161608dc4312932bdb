@@ -1,0 +1,37 @@
+ code();
+		}
+		
+		class Student implements Coder {
+		
+			@Override
+			public void code() {
+				System.out.println("javase");
+				System.out.println("javaweb");
+			}
+			
+		}
+		
+		class ItcastStudent implements Coder {
+			private Student s;						//获取到被包装的类的引用
+			public ItcastStudent(Student s) {		//通过构造函数创建对象的时候,传入被包装的对象
+				this.s = s;
+			}
+			@Override
+			public void code() {					//对其原有功能进行升级
+				s.code();
+				System.out.println("数据库");
+				System.out.println("ssh");
+				System.out.println("安卓");
+				System.out.println(".....");
+			}
+			
+		} 
+
+###21.12_IO流(使用指定的码表读写字符) 
+* FileReader是使用默认码表读取文件, 如果需要使用指定码表读取, 那么可以使用InputStreamReader(字节流,编码表)
+* FileWriter是使用默认码表写出文件, 如果需要使用指定码表写出, 那么可以使用OutputStreamWriter(字节流,编码表)
+* 
+		BufferedReader br = 									//高效的用指定的编码表读
+				new BufferedReader(new InputStreamReader(new FileInputStream("UTF-8.txt"), "UTF-8"));
+		BufferedWriter bw = 									//高效的用指定的编码表写
+				new BufferedWriter(new OutputStreamWriter(new FileOutputStream("GBK.txt"), "GBK

@@ -1,0 +1,38 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test03 {
+
+	/**
+	 * 分析以下需求，并用代码实现：
+		(1)定义List集合，存入多个字符串
+		(2)删除集合中包含0-9数字的字符串(只要字符串中包含0-9中的任意一个数字就需要删除此整个字符串)
+		(3)然后利用迭代器遍历集合元素并输出
+	 */
+	public static void main(String[] args) {
+		String[] s={"asd","qwe","q4er","zxc","q9a","wsx"};
+		ArrayList<String> list=new ArrayList<>();
+		for (String str : s) {
+			list.add(str);
+		}
+		list.trimToSize();
+		for(int i=0;i<list.size();i++){
+			String s1=list.get(i);
+			Pattern p = Pattern.compile("[0-9]*");
+			 Matcher m = p.matcher(s1);
+			 boolean b = m.matches();
+			 if(!b){
+				 System.out.println(list.get(i));
+			 }
+			//if()
+		}
+		/*for (String str : list) {
+			System.out.println(str);
+		}*/
+		
+	}
+
+}

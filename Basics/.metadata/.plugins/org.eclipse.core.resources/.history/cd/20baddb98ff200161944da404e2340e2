@@ -1,0 +1,6 @@
+package com.heima.Dao;
+
+public interface UserDao {
+	
+	
+}

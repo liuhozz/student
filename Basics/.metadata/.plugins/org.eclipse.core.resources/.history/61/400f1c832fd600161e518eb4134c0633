@@ -1,0 +1,59 @@
+package com.heima.Test;
+
+public class Test01 {
+	public static void main(String[] args) {
+		//xx x=new xx();
+		/*Thread t=new Thread(new xx());
+		t.start();*/
+		//匿名内部类实现多线程
+		/*new Thread(){
+			public void run(){
+			}
+		}.start();
+		Thread th=new Thread( new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		th.start();*/
+		
+		
+		//当前线程的引用		Thread.currentThread();
+		//使当前线程休眠		Thread.sleep();
+		//守护线程			
+		int z=0,x=0,d=0;
+		int a=4,b=1,c=9;
+		int sx=0;
+		
+		for(int i=0;i<=a;i++){
+			
+			for(int j= 0;j<=b;j++){
+				if(j*b*5>c)
+					sx=c-b*j;
+				
+			}
+		}
+		if(sx==0)
+		System.out.println(-1);
+		else
+		System.out.println(sx);;
+		
+	}
+}
+
+
+class xx implements Runnable{
+	public void run(){						//重写run方法方法体内些将要执行的代码写在方法中
+		yy y= new yy();
+		y.a();
+	}
+}
+
+
+class yy {
+	public void a(){
+		System.out.println("aaaaaaa");
+	}
+}

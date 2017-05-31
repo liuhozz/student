@@ -1,0 +1,37 @@
+math 
+random的带参构造  中传的种子是什么
+
+
+
+
+
+system
+gc();手挡的垃圾回收器
+arraycopy();从指定源数组中复制一个数组，复制从指定的位置开始，到目标数组的指定位置结束。
+currentTimeMillis();返回以毫秒为单位的当前时间
+
+BigInteger:可以让超过intteger范围的数据进行运算
+isprobableprime();判断是否为
+里面还有进行+-*/的运算的方法
+divideAndRemainder();返回一个有除法和模运算的结果的数组
+
+java.util的 Date类Date d=new date();返回的是当前的时间
+
+		  Date d=new date(0);返回的是 1970年1月1日 0:00:00 但打印出的是08:00:00 因为我们这里是东8区  时区不同 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

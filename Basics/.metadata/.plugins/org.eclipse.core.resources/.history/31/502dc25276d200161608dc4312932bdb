@@ -1,0 +1,3 @@
+eWriter("bbb.txt"));	//创建字符输出流对象,关联bbb.txt
+		
+		

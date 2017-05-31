@@ -1,0 +1,2 @@
+(100);									//设置行号
+		while((line = lnr.readLin

@@ -1,0 +1,68 @@
+1.Scanner(了解)
+	常用方法:
+		hasNextXxx(): hasNextInt   hasNextDouble  hasNextLine ...
+		nextXxx(): nextInt  nextDouble  nextLine ....
+
+	BUG:
+		先录入一个整数,再录入一个字符串,就会出现BUG
+
+	解决方案:	
+		1.创建两个Scanner对象,但是比较浪费空间
+		2.所有数据使用字符串接收, 再转换成对应的数据类型!
+
+
+2.String类(重点)
+	1.字符串是一个不可变的字符序列
+
+	2.字符串一旦初始化就不可以改变!
+
+
+	3.构造方法:
+		String()
+		String(byte[])
+		String(byte[],开始位置,转换个数)
+		String(char[])
+		String(char[],开始位置,转换个数)
+		String(String)
+
+	4.String中的常用方法
+		1.判断功能
+			equals(): 判断两个字符串是否相同(区分大小写的)
+			equalsIgnoreCase(): 判断两个字符串是否相同(不区分大小写的)
+			contains(): 判断字符串中是否包含指定的字符串
+			startsWith(): 判断字符串是否以指定的字符串开头
+			endsWith(): 判断字符串是否以指定的内容结尾
+			isEmpty(): 判断字符串中的内容是否为空!
+		
+		2.获取的功能:	
+			length(): 获取字符串中的长度
+			charAt(index): 根据索引获取指定位置的字符
+			indexOf(int ch): 根据字符查找第一次出现的索引
+			indexOf(int ch,int startIndex): 从指定位置开始查找字符第一次出现的索引
+			indexOf(String): 查找字符串第一次出现的位置
+			indexOf(String,startIndex): 从指定位置开始查找字符串第一次出现的位置
+			lastIndexOf(int ch): 从后面开始查找字符第一次出现的位置
+			...
+			substring(startIndex): 从指定位置开始截取字符串,默认到末尾
+			substring(startIndex,endIndex): 从指定位置开始截取字符串,到指定位置结束(不包含结束位置)
+
+		3.转换功能:
+			getBytes(): 把字符串转换成字节数组
+			toCharArray(): 把字符串转换成字符数组
+			valueOf(Object): 可以把任意数据转换成字符串
+			
+			toUpperCase(): 把字符串转换成大写的
+			toLowerCase(): 把字符串转换成小写的
+			concat(): 两个字符串进行拼接.
+
+		4.其他功能:
+			replace(char a,char b): 替换字符串中的指定字符
+			replace(String a,String b): 替换字符串中的指定字符串
+			trim(): 去掉字符串前后的空格
+			compareTo(): 比较两个字符串的大小,区分大小写
+			compareToIgnoreCase(): 比较两个字符串的大小,不区分大小写
+
+
+
+3.学习的流程:
+	有一个什么样的类(String-->字符串)---->这个类的常用构造方法有什么(如何创建这个类的对象)--->这个类里面的常用方法(一一演示这些方法的作用,以后需要用到时就会想起它)

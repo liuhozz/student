@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;applicationContext_datasource.xml&apos; to &apos;erp_dao/src/test/resources&apos;&#x0D;&#x0A;- Original project: &apos;erp_dao&apos;&#x0D;&#x0A;- Destination element: &apos;erp_dao/src/test/resources&apos;&#x0D;&#x0A;- Original element: &apos;applicationContext_datasource.xml&apos;" description="Copy file" destination="/src\/test\/resources" element1="src/main/resources/applicationContext_datasource.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1494148661215" units="0" version="1.0"/>
+</session>

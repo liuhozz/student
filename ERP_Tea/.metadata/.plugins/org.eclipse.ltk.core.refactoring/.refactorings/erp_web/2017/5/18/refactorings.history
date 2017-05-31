@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;erp_web/src/main/webapp/js/orders.js&apos; to &apos;orders_add.js&apos;" description="Rename resource &apos;orders.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/js/orders.js" name="orders_add.js" stamp="1493810127858" updateReferences="true"/>
+</session>

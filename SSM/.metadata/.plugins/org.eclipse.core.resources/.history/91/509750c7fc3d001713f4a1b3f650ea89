@@ -1,0 +1,5 @@
+package com.heima.springmvc.pojo;
+
+public class QueryVo {
+
+}

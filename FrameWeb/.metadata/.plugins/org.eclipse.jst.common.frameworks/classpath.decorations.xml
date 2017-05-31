@@ -1,0 +1,10 @@
+<classpath>
+  <container id="store!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/FrameWeb/store/WebContent/WEB-INF/lib/hibernate-core-5.0.7.Final.jar">
+      <source-attachment-path>E:/黑马视频/_/day01_hibernate/资料/hibernate-release-5.0.7.Final</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/FrameWeb/store/WebContent/WEB-INF/lib/struts2-core-2.3.24.jar">
+      <source-attachment-path>E:/驱动包/struts-2.3.24-all.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

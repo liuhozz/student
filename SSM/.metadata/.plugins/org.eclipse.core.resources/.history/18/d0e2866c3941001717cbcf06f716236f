@@ -1,0 +1,29 @@
+package com.heima.ssm.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.heima.ssm.mapper.SUserMapper;
+import com.heima.ssm.pojo.SUser;
+import com.heima.ssm.pojo.SUserExample;
+import com.heima.ssm.pojo.SUserExample.Criteria;
+
+public class Login implements com.heima.ssm.service.Login {
+
+	@Autowired
+	private SUserMapper userMapper;
+	
+	public SUser login(SUser user) {
+		// TODO Auto-generated method stub
+		SUserExample example = new SUserExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andCheckcodeEqualTo(user.getPassword());
+		criteria.andCheckcodeEqualTo(user.getPassword());
+		List<SUser> userList = userMapper.selectByExample(example);
+		SUser user2 = userList.get(0);
+		return user2;
+	}
+
+	
+}

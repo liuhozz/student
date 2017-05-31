@@ -1,0 +1,16 @@
+package com.heima.Test;
+
+public class Test02 {
+
+	/**
+	 * @param args
+	 *  定义一个方法(copyFile),接收两个参数, 第一个参数是源文件, 第二个参数是目标文件,
+		该方法的作用是把源文件复制到目标文件,例如,源文件是 c:\1.jpg , 目标文件是 D:\2.jpg ,
+		程序运行后,会把C盘下的1.jpg文件复制到D盘下的2.jpg
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

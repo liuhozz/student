@@ -1,0 +1,5 @@
+入被包装的对象
+				this.s = s;
+			}
+			@Override
+			p

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hos.beans.Keshi" table="Keshi">
+		<!--主键 -->
+		<id name="Ks_id">
+			<generator class="native" />
+		</id>
+		<!--科室名 -->
+		<property name="Ks_name" />
+		<!-- 视频介绍 -->
+		<property name="Ks_introduce" />
+		<!-- 特色科室 -->
+		<property name="Ks_prefect" />
+		<!-- 视频或图片id -->
+		<property name="iV_id" />
+		<!-- 新闻 -->
+		<property name="News" />
+		<!-- 新闻 标题-->
+		<property name="Newstitle" />
+	</class>
+</hibernate-mapping>

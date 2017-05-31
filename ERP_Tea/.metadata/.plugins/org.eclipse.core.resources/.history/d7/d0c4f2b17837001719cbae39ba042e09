@@ -1,0 +1,76 @@
+package cn.itcast.erp.biz.impl;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import cn.itcast.erp.biz.IReturnordersBiz;
+import cn.itcast.erp.dao.IEmpDao;
+import cn.itcast.erp.dao.IReturnordersDao;
+import cn.itcast.erp.dao.ISupplierDao;
+import cn.itcast.erp.entity.Returnorders;
+/**
+ * 退货订单业务逻辑类
+ * @author Administrator
+ *
+ */
+public class ReturnordersBiz extends BaseBiz<Returnorders> implements IReturnordersBiz {
+
+	private IReturnordersDao returnordersDao;
+	private IEmpDao empDao;
+	private ISupplierDao supplierDao;
+	
+	public void setSupplierDao(ISupplierDao supplierDao) {
+		this.supplierDao = supplierDao;
+	}
+	public void setEmpDao(IEmpDao empDao) {
+		this.empDao = empDao;
+	}
+	public void setReturnordersDao(IReturnordersDao returnordersDao) {
+		this.returnordersDao = returnordersDao;
+		super.setBaseDao(this.returnordersDao);
+	}
+	public List<Returnorders> getListByPage(Returnorders t1,Returnorders t2,Object param,int firstResult, int maxResults){
+		//获取分页后的订单列表
+		List<Returnorders> ordersList =  super.getListByPage(t1, t2, param, firstResult, maxResults);
+		//缓存员工编号与员工的名称, key=员工的编号，value=员工的名称
+		Map<Long, String> empNameMap = new HashMap<Long, String>();
+		//缓存供应商编号与员工的名称, key=供应商的编号，value=供应商的名称
+		Map<Long, String> supplierNameMap = new HashMap<Long, String>();
+		//循环，获取员工的名称
+		for(Returnorders o : ordersList){
+			//从缓存中取出员工名称
+			o.setCreaterName(getEmpName(o.getCreater(),empNameMap,empDao));
+			o.setCheckerName(getEmpName(o.getChecker(),empNameMap,empDao));
+			o.setEnderName(getEmpName(o.getEnder(),empNameMap,empDao));
+			
+			//供应商
+			o.setSupplierName(getSupplierName(o.getSupplieruuid(),supplierNameMap));
+		}
+		
+		return ordersList;
+	}
+	
+	/**
+	 * 获取供应商名称
+	 * @param uuid 供应商编号
+	 * @param supplierNameMap 缓存供应商编号与供应商的名称 
+	 * @return 返回供应商名称
+	 */
+	private String getSupplierName(Long uuid, Map<Long, String> supplierNameMap){
+		if(null == uuid){
+			return null;
+		}
+		String supplierName = supplierNameMap.get(uuid);
+		if(null == supplierName){
+			//如果没有找供应商的名称，则进行数据库查询
+			supplierName = supplierDao.get(uuid).getName();
+			//存入缓存中
+			supplierNameMap.put(uuid, supplierName);
+		}
+		return supplierName;
+	}
+	
+	
+	
+	
+}

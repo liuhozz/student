@@ -1,0 +1,10 @@
+package com.heima.Dao;
+
+import java.util.List;
+
+public interface UserDao {
+	
+	List<?> findAll();
+	
+	
+}

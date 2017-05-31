@@ -1,0 +1,5 @@
+package com.heima.ssm.service;
+
+public interface Login {
+
+}

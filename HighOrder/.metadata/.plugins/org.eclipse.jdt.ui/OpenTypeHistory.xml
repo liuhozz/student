@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=store/src&lt;com.heima.store.dao{UserDao.java[UserDao" modifiers="513" timestamp="1488977754402"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{UserService.java[UserService" modifiers="513" timestamp="1488977206810"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{CategoryService.java[CategoryService" modifiers="513" timestamp="1489043297958"/>
+<typeInfo handle="=store/src&lt;com.heima.store.dao{CategoryDao.java[CategoryDao" modifiers="513" timestamp="1489043190687"/>
+<typeInfo handle="=store/src&lt;com.heima.store.dao{ProductDao.java[ProductDao" modifiers="513" timestamp="1489913907791"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{ProductService.java[ProductService" modifiers="513" timestamp="1489913604881"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{CartService.java[CartService" modifiers="513" timestamp="1489199643659"/>
+<typeInfo handle="=store/src&lt;com.heima.store.dao{CartDao.java[CartDao" modifiers="513" timestamp="1489199708395"/>
+<typeInfo handle="=store/src&lt;com.heima.store.dao{OrdersDao.java[OrdersDao" modifiers="513" timestamp="1489403903121"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{OrdersService.java[OrdersService" modifiers="513" timestamp="1489322773922"/>
+<typeInfo handle="=Student_Manage/D:\/Tomcat7.0x\/lib\/servlet-api.jar&lt;javax.servlet(FilterConfig.class[FilterConfig" modifiers="1537" timestamp="1454963308000"/>
+<typeInfo handle="=store/src&lt;com.heima.store.service{CheckCodeService.java[CheckCodeService" modifiers="513" timestamp="1490374104420"/>
+<typeInfo handle="=store/src&lt;com.heima.store.base{BaseServlet.java[BaseServlet" modifiers="1" timestamp="1488798666582"/>
+</typeInfoHistroy>

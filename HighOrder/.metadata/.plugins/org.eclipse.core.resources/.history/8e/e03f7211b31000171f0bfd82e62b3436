@@ -1,0 +1,183 @@
+package com.heima.store.servlet;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.heima.store.base.BaseServlet;
+import com.heima.store.enty.User;
+import com.heima.store.service.UserService;
+import com.heima.store.service.serviceimp.UserServiceImp;
+import com.heima.store.utils.CookUtils;
+import com.heima.store.utils.MailUtils;
+import com.heima.store.utils.MyBeanUtils;
+import com.heima.store.utils.UUIDUtils;
+
+
+public class UserServlet extends BaseServlet {
+	private static final long serialVersionUID = 1L;
+     
+	
+	/**
+	 * 验证码
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public String checkcode(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		return null;
+	}
+
+	/*
+	 * 两个JSP之间的跳转
+	 */
+	public String geturl(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uurl=request.getParameter("uurl");
+		return "/jsp/"+uurl+".jsp";
+	}
+
+	/*
+	 * 注册
+	 */
+	public String registerdb(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			Map<String, String[]> map = request.getParameterMap();
+			User user = MyBeanUtils.populate(User.class, map);
+			user.setUid(UUIDUtils.getId());
+			user.setCode(UUIDUtils.getCode());
+			UserService service=new UserServiceImp();
+			service.useregister(user);
+			MailUtils.sendMail(user.getEmail(), user.getCode());
+			return "/jsp/index.jsp";
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("msg", "注册失败!请重新注册");
+			return "/jsp/info.jsp";
+		}
+		
+	}
+	
+	/*
+	 * 校验用户名是否可用response.setHeader("Content-Type", "text/html;charset=UTF-8");
+	 */
+	public String chackuser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			response.setHeader("Content-Type", "text/html;charset=UTF-8");
+			String username=request.getParameter("username");
+			UserService service=new UserServiceImp();
+			boolean flag = service.chack(username);
+			
+			if(flag){
+				response.getWriter().write("1");
+			}else{
+				response.getWriter().write("0");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	/*
+	 * 邮箱激活用户
+	 */
+	public String active(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		try {
+			String code=request.getParameter("code");
+			UserService service=new UserServiceImp();
+			boolean flag = service.activeuser(code);
+			if(flag){
+				//System.out.println("激活成功");
+				response.sendRedirect("jsp/index.jsp");
+			}else{
+				request.setAttribute("msg", "激活失败!请重新激活");
+				response.sendRedirect("jsp/info.jsp");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	/*
+	 * 用户登陆
+	 */
+	public String loginuser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		try {
+				
+				User user=new User();
+				MyBeanUtils.populate(user, request.getParameterMap());
+				
+				UserService service=new UserServiceImp();
+				user=service.login(user);
+				if(user != null){
+					session.setAttribute("user", user);
+					//session.getAttribute(name)
+					Cookie cookie=new Cookie("user", CookUtils.getCookieByName("JSESSIONID", request.getCookies()).getValue());
+					cookie.setMaxAge(60*60*24*7);
+					cookie.setPath("/");
+					response.addCookie(cookie);
+					response.sendRedirect("IndexServlet");
+					
+					return null;
+				}else{
+					
+					request.setAttribute("msg", "登陆失败!请重新登陆");
+					return "jsp/login.jsp";
+				}
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			request.setAttribute("msg", "未知原因登陆失败");
+			return "jsp/info.jsp";
+		}
+		
+		
+	}
+	
+	/**
+	 * adminloginda
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public String adminlogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		if("admin".equals(username)&&"admin".equals(password)){
+			return "admin/home.jsp";
+		}else{
+			request.setAttribute("msg", "用户名或密码错误");
+			return "admin/index.jsp";
+		}
+	}
+	
+	
+	public String logOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	   //清除session
+		request.getSession().invalidate();
+	  //重新定向到首页
+	  response.sendRedirect("/store/index.jsp");
+		
+		return null;
+	}
+}

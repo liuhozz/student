@@ -1,0 +1,33 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+
+import com.heima.enty.Person;
+
+public class Test2 {
+
+	/**
+	 * 分析以下需求，并用代码实现：
+		(1)定义一个Person类型(属性私有、空参有参构造、set、get方法、toString方法)，
+			包含两个属性：姓名(String name)、年龄(int age)
+		(2)List集合中存储多个Person对象,获取年龄最大的Person对象并打印信息
+		(3)思路
+			a.定义一个Person类型的变量, 先记住第一个元素
+			b.循环遍历集合
+			c.用每一个元素和变量比较年龄, 如果集合中的元素比变量记住的年龄大
+			d.用变量记住这个年龄较大的元素
+			e.返回变量记住的元素
+	 */
+	public static void main(String[] args) {
+		
+		ArrayList<Person> list=new ArrayList<>();
+		list.add(new Person("老龚", 32));
+		list.add(new Person("小龚", 12));
+		list.add(new Person("太龚", 82));
+		list.add(new Person("龚龚", 22));
+		
+		
+		
+	}
+
+}

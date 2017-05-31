@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.itcast.erp.dao.IDepDao"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.DetachedCriteria"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.MatchMode"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+<fullyQualifiedTypeName name="cn.itcast.erp.test.dao.DepDaoTest"/>
+<fullyQualifiedTypeName name="cn.itcast.erp.entity.Dep"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Projection"/>
+<fullyQualifiedTypeName name="org.springframework.expression.spel.ast.Projection"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Projections"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="cn.itcast.erp.biz.IDepBiz"/>
+<fullyQualifiedTypeName name="org.springframework.core.env.JOptCommandLinePropertySource"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.datasource.lookup.MapDataSourceLookup"/>
+<fullyQualifiedTypeName name="com.alibaba.fastjson.JSONArray"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+</qualifiedTypeNameHistroy>

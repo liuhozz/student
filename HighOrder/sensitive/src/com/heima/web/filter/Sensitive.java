@@ -1,0 +1,70 @@
+package com.heima.web.filter;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * Servlet Filter implementation class Sensitive
+ */
+public class Sensitive implements Filter {
+
+    /**
+     * Default constructor. 
+     */
+    public Sensitive() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+	FilterConfig config;
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest req, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		// place your code here
+		HttpServletRequest request=(HttpServletRequest) req;
+		
+		String text = request.getParameter("input");
+		if(text != null){
+			
+			request.setCharacterEncoding("utf-8");
+			response.setContentType("text/html;charset=utf-8");
+			
+			String issensitive=config.getInitParameter("sensitive");
+			
+			System.out.println(issensitive);
+			if(text.indexOf(issensitive) != -1){
+				response.getWriter().write("<h1>您的评论中有敏感字!! 少侠请重新来过!!!</h1>");
+			}else{
+				
+				chain.doFilter(request, response);
+			}
+		}else{
+			
+			chain.doFilter(request, response);
+		}
+		// pass the request along the filter chain
+	}
+
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {
+		config = fConfig;// TODO Auto-generated method stub
+	}
+
+}

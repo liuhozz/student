@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.microsoft.sqlserver.jdbc.SQLServerDriver">
+		</property>
+		<property name="url"
+			value="jdbc:sqlserver://localhost:1433;DatabaseName=hospital_db">
+		</property>
+		<property name="username" value="djp"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/hos/beans/Img_Vedio.hbm.xml</value>
+				<value>com/hos/beans/Keshi.hbm.xml</value>
+				<value>com/hos/beans/Specialist_Expert.hbm.xml</value>
+				<value>com/hos/beans/Login_user.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+	</bean>
+	   <bean id="imgVedioDao" class="com.hos.DaoImp.ImgVedioDaoImp">
+	   <property name="sessionFactory" >
+	   <ref bean="sessionFactory"/>
+	   </property>
+	   </bean>
+	    <bean id="keshiDao" class="com.hos.DaoImp.KeshiDaoImp">
+	   <property name="sessionFactory" >
+	   <ref bean="sessionFactory"/>
+	   </property>
+	   </bean>
+	   <bean id="sEDao" class="com.hos.DaoImp.Specialist_ExpertDaoImp">
+	   <property name="sessionFactory" >
+	   <ref bean="sessionFactory"/>
+	   </property>
+	   </bean>
+	   <bean id="userDao" class="com.hos.DaoImp.LoginDaoImp">
+	   <property name="sessionFactory" >
+	   <ref bean="sessionFactory"/>
+	   </property>
+	   </bean>
+	</beans>

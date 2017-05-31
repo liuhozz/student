@@ -1,0 +1,17 @@
+package com.heima.Test;
+
+public class Test1 {
+
+	/**
+	 * 定义一个方法swap()传入List集合和两个角标(索引)使集合中元素交换位置
+		思路:
+			a.定义一个临时变量, 记住其中一个元素
+			b.用第一个位置存放第二个位置上的元素
+			c.用第二个位置存放临时变量记住的元素
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

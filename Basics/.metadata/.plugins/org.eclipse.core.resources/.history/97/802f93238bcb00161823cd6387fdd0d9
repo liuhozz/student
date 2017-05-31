@@ -1,0 +1,17 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+
+public class Test4 {
+
+	/**
+	 * 定义一个replaceAll方法,把集合中的旧元素替换成新元素(list,old,new)
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void replaseAll(ArrayList<?> list,<T> t,<T> t){
+		
+	}
+}

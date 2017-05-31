@@ -1,0 +1,11 @@
+package com.heima.JDBCTest;
+
+import org.junit.Test;
+
+public class TestJDBC {
+
+	@Test
+	public void Testconn(){
+		
+	}
+}

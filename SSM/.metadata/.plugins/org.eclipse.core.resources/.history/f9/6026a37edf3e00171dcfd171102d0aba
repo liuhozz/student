@@ -1,0 +1,5 @@
+package com.heima.springmvc.erorr;
+
+public class MyException extends Exception {
+
+}

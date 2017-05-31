@@ -1,0 +1,13 @@
+package com.heima.ssm.service.impl;
+
+import com.heima.ssm.pojo.SUser;
+
+public class Login implements com.heima.ssm.service.Login {
+
+	public SUser login(SUser user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

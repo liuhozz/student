@@ -1,0 +1,19 @@
+package com.heima.JDBCTest;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.junit.Test;
+
+public class TestJDBC {
+	static Connection conn=null;
+	static Statement st=null;
+	static ResultSet rs=null;
+	
+	@Test
+	public void Testinsert(){
+		
+	}
+	
+}

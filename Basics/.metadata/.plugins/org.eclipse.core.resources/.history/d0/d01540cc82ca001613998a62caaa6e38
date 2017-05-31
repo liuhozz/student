@@ -1,0 +1,29 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Test02 {
+
+	/**
+	 *2.分析以下需求，并用代码实现：
+		(1)定义List集合，使用键盘录入存入多个字符串,当输入"quit"字符串时结束输入
+		(2)删除集合中字符串"def"
+		(3)然后利用迭代器遍历集合元素并输出
+	 */
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		while (!sc.next().equals("quit")){
+			list.add(sc.next());
+		}
+		list.remove("def");
+		
+		Iterator<String> it=list.iterator();
+		
+		while(it.hasNext())
+			System.out.println(it.next());
+	}
+
+}

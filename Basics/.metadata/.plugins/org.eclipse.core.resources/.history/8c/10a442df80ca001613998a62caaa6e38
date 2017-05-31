@@ -1,0 +1,31 @@
+package com.heima.Test;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Test01 {
+
+	/**
+	 * 1.分析以下需求，并用代码实现：
+		(1)生成10个1至100之间的随机整数，存入一个List集合
+		(2)然后利用迭代器遍历集合元素并输出
+
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayListDome();
+	}
+
+	public static void ArrayListDome() {
+		Random rd=new Random();
+		
+		ArrayList<Integer> list=new ArrayList<>();
+		
+		while (list.size()<10){
+			int i=rd.nextInt(100)+1;
+			list.add(i);
+		}
+		System.out.println(list);
+	}
+
+}

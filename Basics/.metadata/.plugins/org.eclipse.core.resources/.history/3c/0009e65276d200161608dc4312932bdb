@@ -1,0 +1,1 @@
+ter fw = new FileWriter("bbb.txt");			//创建字符输出流,关联

@@ -1,0 +1,7 @@
+package com.heima.enty;
+
+public class Engine {
+	void start(){
+		System.out.println("引擎启动了");
+	}
+}

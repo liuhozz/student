@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;prest&apos; in &apos;com.heima.DaoImp.UserDaoImp.Insert()&apos; to &apos;pt&apos;&#x0D;&#x0A;- Original project: &apos;JDBC&apos;&#x0D;&#x0A;- Original element: &apos;com.heima.DaoImp.UserDaoImp.Insert().prest&apos;&#x0D;&#x0A;- Renamed element: &apos;prest&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;prest&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.heima.DaoImp{UserDaoImp.java[UserDaoImp~Insert@prest!1403!1455!1421!1425!QPreparedStatement;!0!false" name="pt" references="true" stamp="1487063734130" version="1.0"/>
+</session>

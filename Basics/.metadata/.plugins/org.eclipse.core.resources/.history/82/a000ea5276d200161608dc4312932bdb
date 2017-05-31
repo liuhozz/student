@@ -1,0 +1,2 @@
+= 									//高效的用指定的编码表读
+				new BufferedReader(n

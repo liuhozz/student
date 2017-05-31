@@ -1,0 +1,15 @@
+<classpath>
+  <container id="CRM_SSM!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/SSM/CRM_SSM/WebContent/WEB-INF/lib/spring-webmvc-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/黑马视频/_/mybatis-day2/springmvc预习资料/01课前资料/jar包/源码包/spring-webmvc-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="SSM_Test!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/SSM/SSM_Test/WebContent/WEB-INF/lib/spring-webmvc-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/黑马视频/_/mybatis-day2/springmvc预习资料/01课前资料/jar包/源码包/spring-webmvc-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/Eclipse/SSM/SSM_Test/WebContent/WEB-INF/lib/spring-web-4.2.4.RELEASE.jar">
+      <source-attachment-path>E:/黑马视频/_/mybatis-day2/springmvc预习资料/01课前资料/jar包/源码包/spring-web-4.2.4.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

@@ -1,0 +1,4 @@
+w.newLine();						//跨平台的
+		}
+		
+		br.close();

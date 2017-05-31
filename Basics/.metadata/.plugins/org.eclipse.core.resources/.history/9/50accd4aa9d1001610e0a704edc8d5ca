@@ -1,0 +1,14 @@
+package com.heima.Test;
+
+public class Test01 {
+
+	/**
+	 * @param args
+	 * 把九九乘法表输出到当前目录下的99.txt文件中
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,134 @@
+1.正则表达式
+	1.正确的规则
+
+	2.常用内容:
+		1.字符类:	
+			[abc]: 只能是其中一个
+			[a-zA-Z]: 是这个范围中的一个
+			[^abc]: 不能是其中的一个
+
+		2.预定义字符:
+			. : 代表任意单个字符
+			\d: 代表数字字符[0-9]
+			\D: 代表非数字字符
+			\s: 代表空白字符: \t \r \n 
+			\S: 代表非空白字符
+			\w: 代表单词字符: [a-zA-Z_0-9]
+			\W: 代表非单词字符
+
+			在字符串中两个\代表一个,因为\在字符串中有转义的效果!
+
+
+		3.数量词:
+			? : 代表一次或者没有
+			* : 代表0到多次
+			+ : 代表一次或者多次
+			{n}:代表恰好出现n次
+			{n,}: 代表至少出现n次
+			{n,m}:代表出现n到m次
+
+	4.正则的应用:
+		
+		s.matches(regex) : 完全匹配
+
+		1.切割:
+			String类中的split方法:
+				split中的参数可以是正则表达式
+
+		2.替换:
+			分组:在正则中,小括号用于分组,有几个左小括号就有几组,第几个左括号就是第几组!
+				(()(()))
+
+				第0组,指的是整个正则表达式
+
+			replaceAll(regex,"内容") : 内容部分可以通过 $组号 来引用第一个参数中的分组的内容
+
+		3.java中支持正则的类:
+			Pattern p = Pattern.compile("正则"); // 把正则表达式编译成正则对象
+			Matcher m = p.matcher("需要匹配的字符串"); //用正则来匹配字符串,得到一个匹配器对象
+			
+			m.find(): 查找字符串中是否有匹配正则的内容,如果有,返回true, 每调用一次,指针向后移动一次
+			m.group(): 获取查找到的匹配正则的字符串
+
+		
+
+
+
+2.其他常用API
+	1.Math类:
+		abs(): 获取绝对值
+		ceil(): 向上取整,是一个小数
+		floor(): 向下取整,也是一个小数
+		max(x,y): 取最大值
+		round(double): 四舍五入
+		pow(x,y): 求x的y次方
+		sqrt(x): 对x进行开平方
+		random(): 获取随机数
+
+	2.Random类:
+		构造方法:
+			Random(): 默认使用系统的纳秒时间作为种子
+			Random(long): 使用指定的种子创建对象
+			
+		常用方法:
+			nextInt(): 随机生成int范围的整数
+			nextInt(n): 随机生成在0~n之间整数,不包含n
+
+
+	3.System类:
+		gc(): 呼唤垃圾回收器(了解)
+		exit(int):退出虚拟机,参数0代表正常终止,非0代表异常终止
+		currentTimeMillis():得到当前系统时间的毫秒值. 这个毫秒值是从1970年1月1日 0时0分0秒开始到现在的毫秒值.
+
+		
+	4.BigInteger类: 大整数类
+		用于计算远远超过int范围的整数
+		构造方法:	
+			BigInteger(String): 把整数字符串转换成BigInteger对象
+
+		常用方法:
+			add(BigInteger): 加法
+			subtract(BigInteger): 减法
+			multiply(BigInteger): 乘法
+			divide(BigInteger): 除法
+			divideAndRemainder(BigInteger): 除法返回的是商和余数,返回的是一个BigInteger数组
+		
+	5.BigDecimal类:
+		能够计算精度更高的小数
+
+	6.Date类:
+		构造方法:
+		Date(): 使用系统当前时间创建的日期对象
+		Date(long): 使用指定的毫秒值作为时间创建的日期对象
+
+		常用方法:
+			getTime(): 获取日期对象中的毫秒值
+			setTime(long): 设置日期对象中的毫秒值!
+
+		
+	7.SimpleDateFormat类:
+		构造方法:
+			SimpleDateFormat("日期格式"): 按照指定的日期格式创建对象
+				yyyy: 年
+				MM: 月
+				dd: 日
+				HH: 时
+				mm: 分
+				ss: 秒
+				
+		常用方法:
+			format(Date): 把日期对象转换成字符串
+			parse(String): 把日期字符串转换成日期对象
+
+	8. Calendar类:日历类
+		1.如何得到对象:
+			Calendar c = Calendar.getInstance();
+
+		2.常用方法:
+			get(int): 根据传入的参数返回不同的值!
+			add(字段,增加或者减少的值): 可以对指定的字段增加或者减少
+			set(): 设置指定时间
+
+
+
+	

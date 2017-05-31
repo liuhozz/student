@@ -1,0 +1,35 @@
+的字符,就会用?代替,写出的时候会将字符转换成字节写出去
+* 如果是?,直接写出,这样写出之后的文件就乱了,看不了了  
+
+###21.06_IO流(自定义字符数组的拷贝)
+*	
+		
+		FileReader fr = new FileReader("aaa.txt");			//创建字符输入流,关联aaa.txt
+		FileWriter fw = new FileWriter("bbb.txt");			//创建字符输出流,关联bbb.txt
+		
+		int len;
+		char[] arr = new char[1024*8];						//创建字符数组
+		while((len = fr.read(arr)) != -1) {					//将数据读到字符数组中
+			fw.write(arr, 0, len);							//从字符数组将数据写到文件上
+		}
+		
+		fr.close();											//关流释放资源
+		fw.close();	
+
+###21.07_IO流(带缓冲的字符流) 
+* BufferedReader的read()方法读取字符时会一次读取若干字符到缓冲区, 然后逐个返回给程序, 降低读取文件的次数, 提高效率
+* BufferedWriter的write()方法写出字符时会先写到缓冲区, 缓冲区写满时才会写到文件, 降低写文件的次数, 提高效率
+* 
+		BufferedReader br = new BufferedReader(new FileReader("aaa.txt"));	//创建字符输入流对象,关联aaa.txt
+		BufferedWriter bw = new BufferedWriter(new FileWriter("bbb.txt"));	//创建字符输出流对象,关联bbb.txt
+		
+		int ch;				
+		while((ch = br.read()) != -1) {		//read一次,会先将缓冲区读满,从缓冲去中一个一个的返给临时变量ch
+			bw.write(ch);					//write一次,是将数据装到字符数组,装满后再一起写出去
+		}
+		
+		br.close();							//关流
+		bw.close();  
+
+
+###

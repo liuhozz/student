@@ -1,0 +1,4 @@
+Number() + ":" + line);//获取行号
+		}
+		
+		lnr.clos

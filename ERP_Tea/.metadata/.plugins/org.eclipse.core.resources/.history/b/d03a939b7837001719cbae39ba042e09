@@ -1,0 +1,59 @@
+package cn.itcast.erp.biz.impl;
+
+import java.util.List;
+
+import cn.itcast.erp.biz.IReturnordersBiz;
+import cn.itcast.erp.entity.Returnorders;
+
+public class ReturnordersBiz implements IReturnordersBiz {
+
+	@Override
+	public List<Returnorders> getList(Returnorders t1, Returnorders t2, Object param) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getCount(Returnorders t1, Returnorders t2, Object param) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void add(Returnorders t) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Long uuid) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Returnorders get(Long uuid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Returnorders get(String uuid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Returnorders t) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Returnorders> getListByPage(Returnorders t1, Returnorders t2, Object param, int firstResult,
+			int maxResults) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

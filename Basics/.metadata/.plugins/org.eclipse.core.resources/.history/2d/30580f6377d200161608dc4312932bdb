@@ -1,0 +1,19 @@
+package com.heima.Test;
+
+public class Test02 {
+
+	/**
+	 * 在课堂上的文本文件中的每一行反转的基础上,对每一行的内容也进行反转!
+			例如,原文本的内容是:abc
+								def
+								hjk
+			反转后的内容是:kjh
+						   fed
+						   cba
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,3 @@
+的write()方法可以自动把字符转为字节写出
+
+		FileWriter fw = new F

@@ -1,0 +1,2 @@
+int ch;				
+		while((ch = br.read()) != -1) {		//

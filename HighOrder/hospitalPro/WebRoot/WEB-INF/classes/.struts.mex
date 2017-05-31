@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="common" location="0,0" size="0,0">
+    <action name="login" location="0,0" size="0,0">
+      <result name="loginsuccess">
+        <resourceEdge source="loginsuccess" routing="0" target="hospitalSystem.jsp" />
+      </result>
+      <result name="loginerror">
+        <resourceEdge source="loginerror" routing="0" target="HtLogin.jsp" />
+      </result>
+    </action>
+    <action name="zhuce" location="0,0" size="0,0">
+      <result name="savesuccess">
+        <resourceEdge source="savesuccess" routing="0" target="HtLogin.jsp" />
+      </result>
+      <result name="saveerror">
+        <resourceEdge source="saveerror" routing="0" target="zhuce.jsp" />
+      </result>
+    </action>
+    <action name="list" location="0,0" size="0,0">
+      <result name="savesuccess" />
+    </action>
+    <action name="delete" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="find" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="IVInfo.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="findks" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="keshiInfo.jsp" />
+      </result>
+    </action>
+    <action name="findks1" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="keshiname_before.jsp" />
+      </result>
+    </action>
+    <action name="findks2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="NewsTilte_before.jsp" />
+      </result>
+    </action>
+    <action name="deleteks" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="editks" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="saveks" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="showKS" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="keshiInfo_before.jsp" />
+      </result>
+    </action>
+    <action name="showKS" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="News_before.jsp" />
+      </result>
+    </action>
+    <action name="findSE" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="SEInfo.jsp" />
+      </result>
+    </action>
+    <action name="findSE_bf" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="SEname_before.jsp" />
+      </result>
+    </action>
+    <action name="deleteSE" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="saveSE" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="hospitalSystem.jsp" />
+      </result>
+    </action>
+    <action name="showSE" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="SEInfo_before.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="hospitalSystem.jsp" path="/hospitalSystem.jsp" location="0,0" size="0,0" />
+  <webResource name="HtLogin.jsp" path="/HtLogin.jsp" location="0,0" size="0,0" />
+  <webResource name="success.jsp" path="/success.jsp" location="0,0" size="0,0" />
+  <webResource name="ceshi.jsp" path="/ceshi.jsp" location="0,0" size="0,0" />
+  <webResource name="IVInfo.jsp" path="/IVInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="keshiInfo.jsp" path="/keshiInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="SEInfo.jsp" path="/SEInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="zhuce.jsp" path="/zhuce.jsp" location="0,0" size="0,0" />
+  <webResource name="index.jsp" path="/jsp/scientificresearch/index.jsp" location="0,0" size="0,0" />
+  <webResource name="keshiname_before.jsp" path="/keshiname_before.jsp" location="0,0" size="0,0" />
+  <webResource name="keshiInfo_before.jsp" path="/keshiInfo_before.jsp" location="0,0" size="0,0" />
+  <webResource name="SEname_before.jsp" path="/SEname_before.jsp" location="0,0" size="0,0" />
+  <webResource name="SEInfo_before.jsp" path="SEInfo_before.jsp" location="0,0" size="0,0" />
+  <webResource name="SEInfo_before.jsp" path="/SEInfo_before.jsp" location="0,0" size="0,0" />
+  <webResource name="NewsTilte_before.jsp" path="/NewsTilte_before.jsp" location="0,0" size="0,0" />
+  <webResource name="News_before.jsp" path="/News_before.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

@@ -1,0 +1,18 @@
+package com.heima.ssm.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.heima.ssm.pojo.SUser;
+
+@Controller
+public class CustomerController {
+
+	@RequestMapping("login")
+	public String login(SUser user){
+		
+		
+		
+		return "";
+	}
+}

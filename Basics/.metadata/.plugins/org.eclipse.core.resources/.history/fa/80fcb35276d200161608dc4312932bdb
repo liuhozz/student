@@ -1,0 +1,4 @@
+Writer("b.txt");
+	
+	int ch;
+	while((ch = fr.rea

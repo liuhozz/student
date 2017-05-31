@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492930925826_0" label="erp_parent" name="erp_parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_biz" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_dao" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/erp_entity" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1494728546553_2" label="redsun_parent" name="redsun_parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/redsun_parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/redsun_entity" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/redsun_dao" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/redsun_biz" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/redsun_web" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492948456367_1" label="Window Working Set" name="Aggregate for window 1492948456367"/>
+</workingSetManager>

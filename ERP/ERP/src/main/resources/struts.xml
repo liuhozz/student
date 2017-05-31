@@ -1,0 +1,15 @@
+﻿<?xml version ="1.0" encoding ="utf-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+	<!--常量配置<constant name="(常量名)struts.enable.DynamicMethodInvocation" value="(值)false">-->
+	
+	<package name="abc" namespace="/" extends="struts-default">
+		<action name="first_*" class="com.heima.erp.web.action.FirstAction" method="{1}">
+			<result>/index.jsp</result>	
+		</action>
+	</package>
+</struts>
